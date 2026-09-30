@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | SkinSense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="auth-page">
+        <section class="auth-card">
+            <h1>Create your account.</h1>
+            <p>Join the SkinSense community.</p>
+
+            <label for="signup-email">Email</label>
+            <input id="signup-email" type="email" placeholder="Your email">
+
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="password" placeholder="Create a password">
+
+            <button class="dark-button" onclick="signUpUser()">
+                Create Account
+            </button>
+
+            <button class="google-button" onclick="loginWithGoogle()">
+                Sign up with Google
+            </button>
+
+            <p id="signup-message"></p>
+
+            <a href="login.html">
+                Already have an account?
+            </a>
+
+            <a href="index.html">
+                Back to SkinSense
+            </a>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
