@@ -6,44 +6,33 @@
     <title>Log In | SkinSense</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body onload="redirectIfLoggedIn()">
 
-<body>
-    <main class="auth-page">
-        <section class="auth-card">
-            <h1>Welcome back.</h1>
-            <p>Log in to your SkinSense account.</p>
+<main class="auth-page">
+    <section class="auth-card">
+        <h1>Welcome back.</h1>
+        <p>Log in to your SkinSense account.</p>
 
-            <label for="login-email">Email</label>
-            <input id="login-email" type="email" placeholder="Your email">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" required>
 
-            <label for="login-password">Password</label>
-            <input id="login-password" type="password" placeholder="Your password">
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" required>
 
-            <button class="dark-button" onclick="loginUser()">
-                Log In
-            </button>
+        <button class="dark-button" onclick="loginUser()">Log In</button>
+        <button class="google-button" onclick="loginWithGoogle()">
+            Continue with Google
+        </button>
 
-            <button class="google-button" onclick="loginWithGoogle()">
-                Continue with Google
-            </button>
+        <p id="login-message"></p>
 
-            <p id="login-message"></p>
+        <a href="forgot-password.html">Forgot your password?</a>
+        <a href="signup.html">Create an account</a>
+        <a href="index.html">Back to SkinSense</a>
+    </section>
+</main>
 
-            <a href="forgot-password.html">
-                Forgot your password?
-            </a>
-
-            <a href="signup.html">
-                Create an account
-            </a>
-
-            <a href="index.html">
-                Back to SkinSense
-            </a>
-        </section>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
 </body>
 </html>

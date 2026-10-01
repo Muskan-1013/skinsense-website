@@ -4,16 +4,77 @@ const SUPABASE_URL =
 const SUPABASE_KEY =
     "sb_publishable_EZ-ZHcOnSEWQVyEmKAMeXg_TyjygF1j";
 
+
 const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
-    SUPABASE_KEY
+    SUPABASE_KEY,
+    {
+        auth: {
+            persistSession: true,
+            autoRefreshToken: true,
+            detectSessionInUrl: true
+        }
+    }
 );
 
+function showHomeProfile(user) {
+    const label = document.getElementById("profile-label");
+    const profileLink = document.getElementById("profile-link");
+    const logoutButton = document.getElementById("logout-button");
 
-function getSiteUrl() {
-    return window.location.origin;
+    if (label) {
+        label.textContent = user.email;
+        label.hidden = false;
+    }
+
+    if (profileLink) {
+        profileLink.hidden = false;
+    }
+
+    if (logoutButton) {
+        logoutButton.hidden = false;
+    }
 }
 
+async function startHomePage() {
+    const result = await supabaseClient.auth.getSession();
+
+    if (result.error || !result.data.session) {
+        window.location.replace("signup.html");
+        return;
+    }
+
+    showHomeProfile(result.data.session.user);
+
+    const splash = document.getElementById("splash-screen");
+
+    window.setTimeout(function () {
+        if (splash) {
+            splash.classList.add("splash-hidden");
+        }
+
+        document.body.classList.remove("auth-checking");
+    }, 1600);
+
+    supabaseClient.auth.onAuthStateChange(function (event, session) {
+        if (event === "SIGNED_OUT") {
+            window.location.replace("signup.html");
+            return;
+        }
+
+        if (session) {
+            showHomeProfile(session.user);
+        }
+    });
+}
+
+async function redirectIfLoggedIn() {
+    const result = await supabaseClient.auth.getSession();
+
+    if (!result.error && result.data.session) {
+        window.location.replace("index.html");
+    }
+}
 
 async function signUpUser() {
     const email = document.getElementById("signup-email").value;
@@ -24,19 +85,23 @@ async function signUpUser() {
         email: email,
         password: password,
         options: {
-            emailRedirectTo: getSiteUrl() + "/account.html"
+            emailRedirectTo: window.location.origin + "/index.html"
         }
     });
 
     if (result.error) {
-        message.innerHTML = result.error.message;
+        message.textContent = result.error.message;
         return;
     }
 
-    message.innerHTML =
-        "Account created. Check your email to verify your account.";
-}
+    if (result.data.session) {
+        window.location.replace("index.html");
+        return;
+    }
 
+    message.textContent =
+        "Account created. Check your email to verify it, then return to SkinSense.";
+}
 
 async function loginUser() {
     const email = document.getElementById("login-email").value;
@@ -49,19 +114,18 @@ async function loginUser() {
     });
 
     if (result.error) {
-        message.innerHTML = result.error.message;
+        message.textContent = result.error.message;
         return;
     }
 
-    window.location.href = "account.html";
+    window.location.replace("index.html");
 }
-
 
 async function loginWithGoogle() {
     const result = await supabaseClient.auth.signInWithOAuth({
         provider: "google",
         options: {
-            redirectTo: getSiteUrl() + "/account.html"
+            redirectTo: window.location.origin + "/index.html"
         }
     });
 
@@ -70,75 +134,59 @@ async function loginWithGoogle() {
     }
 }
 
-
 async function sendPasswordReset() {
     const email = document.getElementById("reset-email").value;
     const message = document.getElementById("reset-message");
 
-    const result =
-        await supabaseClient.auth.resetPasswordForEmail(
-            email,
-            {
-                redirectTo: getSiteUrl() + "/reset-password.html"
-            }
-        );
+    const result = await supabaseClient.auth.resetPasswordForEmail(
+        email,
+        {
+            redirectTo: window.location.origin + "/reset-password.html"
+        }
+    );
 
     if (result.error) {
-        message.innerHTML = result.error.message;
+        message.textContent = result.error.message;
         return;
     }
 
-    message.innerHTML =
-        "If this email exists, a password reset link has been sent.";
+    message.textContent =
+        "If the email is registered, a password reset link has been sent.";
 }
 
-
 async function updatePassword() {
-    const password =
-        document.getElementById("new-password").value;
-
+    const password = document.getElementById("new-password").value;
     const message =
         document.getElementById("update-password-message");
 
-    const result =
-        await supabaseClient.auth.updateUser({
-            password: password
-        });
+    const result = await supabaseClient.auth.updateUser({
+        password: password
+    });
 
     if (result.error) {
-        message.innerHTML = result.error.message;
+        message.textContent = result.error.message;
         return;
     }
 
-    message.innerHTML =
-        "Your password has been updated successfully.";
+    message.textContent = "Your password has been updated.";
 }
-
 
 async function loadAccount() {
-    const result =
-        await supabaseClient.auth.getUser();
+    const result = await supabaseClient.auth.getUser();
 
-    if (
-        result.error ||
-        result.data.user === null
-    ) {
-        window.location.href = "login.html";
+    if (result.error || !result.data.user) {
+        window.location.replace("signup.html");
         return;
     }
 
-    const emailElement =
-        document.getElementById("account-email");
+    const email = document.getElementById("account-email");
 
-    if (emailElement) {
-        emailElement.innerHTML =
-            result.data.user.email;
+    if (email) {
+        email.textContent = result.data.user.email;
     }
 }
-
 
 async function logoutUser() {
     await supabaseClient.auth.signOut();
-
-    window.location.href = "login.html";
+    window.location.replace("signup.html");
 }

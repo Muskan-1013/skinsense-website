@@ -6,13 +6,11 @@
     <title>SkinSense | Know Your Skin, Care Better</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="auth-checking">
 
 <div class="splash-screen" id="splash-screen">
     <div class="splash-content">
-        <div class="splash-logo">
-<img class="brand-logo" src="logo.png" alt="SkinSense logo">
-        </div>
+        [image removed]
         <p class="eyebrow">SKINSENSE</p>
         <h1>Know Your Skin.</h1>
         <p>Care better with clearer insight.</p>
@@ -22,7 +20,7 @@
 
 <header class="site-header">
     <a class="brand" href="#home">
-<img class="brand-logo" src="logo.png" alt="SkinSense logo">
+        [image removed]
     </a>
 
     <nav class="navigation">
@@ -36,458 +34,360 @@
     </nav>
 
     <div class="account-links">
-        <a href="login.html">Log In</a>
-        <a class="signup-link" href="signup.html">Sign Up</a>
+        <span id="profile-label" hidden></span>
+        <a id="profile-link" href="account.html" hidden>My Profile</a>
+        <button id="logout-button" onclick="logoutUser()" hidden>Log Out</button>
     </div>
 </header>
 
 <main>
+    <section class="hero-section" id="home">
+        <div class="hero-copy">
+            <p class="eyebrow">Affordable skincare technology</p>
+            <h1>Know Your Skin,<br>Care Better.</h1>
+            <p class="hero-tagline">We don't guess your skin. We measure it.</p>
+            <p>
+                DermaSense is a low-cost, IoT-enabled device that measures
+                moisture, pH, and oiliness, then helps you understand which
+                skincare ingredients may suit your skin.
+            </p>
 
-<section class="hero-section" id="home">
-    <div class="hero-copy">
-        <p class="eyebrow">Affordable skincare technology</p>
-        <h1>Know Your Skin,<br>Care Better.</h1>
-        <p class="hero-tagline">We don't guess your skin. We measure it.</p>
-        <p class="hero-description">
-            DermaSense is a low-cost, IoT-enabled device that measures
-            moisture, pH, and oiliness, then helps you understand which
-            skincare ingredients may suit your skin.
-        </p>
-
-        <div class="hero-buttons">
-            <a class="primary-button" href="#how-it-works">See How It Works</a>
-            <a class="secondary-button" href="#waitlist">Join the Waitlist</a>
+            <div class="hero-buttons">
+                <a class="primary-button" href="#how-it-works">See How It Works</a>
+                <a class="secondary-button" href="#waitlist">Join the Waitlist</a>
+            </div>
         </div>
-    </div>
 
-    <div class="hero-art">
-        <p class="art-label">DERMASENSE / 01</p>
-<img class="device-photo" src="device.png" alt="DermaSense skincare analysis device">
-        <p class="art-caption">Measure. Understand. Care.</p>
-        <span class="decorative-dot dot-one"></span>
-        <span class="decorative-dot dot-two"></span>
-        <span class="decorative-dot dot-three"></span>
-    </div>
-</section>
+        <div class="hero-art">
+            <p class="art-label">DERMASENSE / 01</p>
+            [image removed]
+            <p class="art-caption">Measure. Understand. Care.</p>
+            <span class="decorative-dot dot-one"></span>
+            <span class="decorative-dot dot-two"></span>
+            <span class="decorative-dot dot-three"></span>
+        </div>
+    </section>
 
-<section class="intro-strip">
-    <div class="intro-number">01</div>
-    <div>
-        <p class="eyebrow">A clearer starting point</p>
-        <h2>Skin insights without the guesswork.</h2>
-    </div>
-    <p>
-        SkinSense is on a mission to make practical, science-backed skin
-        analysis more affordable and understandable.
-    </p>
-</section>
-
-<section class="section" id="product">
-    <div class="section-heading">
-        <p class="eyebrow">What DermaSense measures</p>
-        <h2>Three readings. A more informed routine.</h2>
-    </div>
-
-    <div class="feature-grid">
-        <article class="feature-card blue-card">
-            <div class="feature-icon">◌</div>
-            <p class="card-number">01 / MEASURE</p>
-            <h3>Moisture</h3>
-            <p>
-                Capacitive sensing helps estimate hydration and gives you
-                a starting point for understanding skin moisture.
-            </p>
-        </article>
-
-        <article class="feature-card cream-card">
-            <div class="feature-icon">✧</div>
-            <p class="card-number">02 / MEASURE</p>
-            <h3>pH Balance</h3>
-            <p>
-                A liquid probe reads an acid-alkaline value. The result is
-                educational and is not a medical diagnosis.
-            </p>
-        </article>
-
-        <article class="feature-card sage-card">
-            <div class="feature-icon">☼</div>
-            <p class="card-number">03 / MEASURE</p>
-            <h3>Oiliness</h3>
-            <p>
-                Blotting paper and a light sensor estimate surface oil by
-                comparing clean paper with a skin sample.
-            </p>
-        </article>
-    </div>
-</section>
-
-<section class="product-panel">
-    <div class="product-copy">
-        <p class="eyebrow">Meet the device</p>
-        <h2>Small device.<br>Clearer skin insights.</h2>
+    <section class="intro-strip">
+        <p class="intro-number">01</p>
+        <div>
+            <p class="eyebrow">A clearer starting point</p>
+            <h2>Skin insights without the guesswork.</h2>
+        </div>
         <p>
-            DermaSense brings together simple sensors, a compact display,
-            and ingredient education to make skin analysis more approachable.
+            SkinSense aims to make practical, science-backed skin analysis
+            more affordable and understandable.
         </p>
-        <a class="dark-button" href="#waitlist">Join the Waitlist</a>
-    </div>
+    </section>
 
-    <div class="spec-card">
-        <div class="spec-top">
-            <span>DERMASENSE</span>
-            <span>TECHNICAL NOTES</span>
+    <section class="section" id="product">
+        <div class="section-heading">
+            <p class="eyebrow">What DermaSense measures</p>
+            <h2>Three readings. A more informed routine.</h2>
         </div>
 
-        <div class="spec-list">
-            <div><span>Controller</span><strong>ESP32</strong></div>
-            <div><span>Moisture sensor</span><strong>YL-69</strong></div>
-            <div><span>pH sensor</span><strong>PH-4502C</strong></div>
-            <div><span>Light sensor</span><strong>BH1750</strong></div>
-            <div><span>Display</span><strong>16x2 LCD</strong></div>
-            <div><span>Estimated project cost</span><strong>About Rs. 2,500</strong></div>
-        </div>
+        <div class="feature-grid">
+            <article class="feature-card blue-card">
+                <div class="feature-icon">◌</div>
+                <p class="card-number">01 / MEASURE</p>
+                <h3>Moisture</h3>
+                <p>
+                    Capacitive sensing helps estimate hydration and gives you
+                    a starting point for understanding skin moisture.
+                </p>
+            </article>
 
-        <div class="box-note">
-            <h3>What's in the box?</h3>
+            <article class="feature-card cream-card">
+                <div class="feature-icon">✧</div>
+                <p class="card-number">02 / MEASURE</p>
+                <h3>pH Balance</h3>
+                <p>
+                    A liquid probe reads an acid-alkaline value. This reading
+                    is educational, not a medical diagnosis.
+                </p>
+            </article>
+
+            <article class="feature-card sage-card">
+                <div class="feature-icon">☼</div>
+                <p class="card-number">03 / MEASURE</p>
+                <h3>Oiliness</h3>
+                <p>
+                    Blotting paper and a light sensor estimate surface oil by
+                    comparing clean paper with a skin sample.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="product-panel">
+        <div>
+            <p class="eyebrow">Meet the device</p>
+            <h2>Small device.<br>Clearer skin insights.</h2>
             <p>
-                Planned contents include the DermaSense device, sensors,
-                display, and a calibration guide. Final contents may change
-                as the prototype develops.
+                DermaSense brings together simple sensors, a compact display,
+                and ingredient education to make skin analysis more approachable.
+            </p>
+            <a class="dark-button" href="#waitlist">Join the Waitlist</a>
+        </div>
+
+        <div class="spec-card">
+            <p class="eyebrow">Technical notes</p>
+            <div class="spec-list">
+                <div><span>Controller</span><strong>ESP32</strong></div>
+                <div><span>Moisture sensor</span><strong>YL-69</strong></div>
+                <div><span>pH sensor</span><strong>PH-4502C</strong></div>
+                <div><span>Light sensor</span><strong>BH1750</strong></div>
+                <div><span>Display</span><strong>16x2 LCD</strong></div>
+                <div><span>Estimated project cost</span><strong>About Rs. 2,500</strong></div>
+            </div>
+
+            <div class="box-note">
+                <h3>What's in the box?</h3>
+                <p>
+                    Planned contents include the DermaSense device, sensors,
+                    display, and calibration guide. Final contents may change
+                    as the prototype develops.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+        <div class="section-heading centered">
+            <p class="eyebrow">The process</p>
+            <h2>From measurement to meaning.</h2>
+            <p>Four steps help explain the readings and their limitations.</p>
+        </div>
+
+        <div class="process-grid">
+            <article class="process-card">
+                <span>01</span><div class="process-symbol">⌁</div>
+                <h3>Calibrate</h3>
+                <p>Prepare sensors against known reference samples.</p>
+            </article>
+            <article class="process-card">
+                <span>02</span><div class="process-symbol">◉</div>
+                <h3>Measure</h3>
+                <p>Collect moisture and pH readings, then estimate surface oil.</p>
+            </article>
+            <article class="process-card">
+                <span>03</span><div class="process-symbol">✦</div>
+                <h3>See Results</h3>
+                <p>Review readings in plain language. One reading is not a diagnosis.</p>
+            </article>
+            <article class="process-card">
+                <span>04</span><div class="process-symbol">♡</div>
+                <h3>Explore Guidance</h3>
+                <p>Use ingredient suggestions as educational starting points.</p>
+            </article>
+        </div>
+
+        <div class="method-note">
+            <p class="eyebrow">The oiliness reading</p>
+            <h3>Why blotting paper and light?</h3>
+            <p>
+                The proposed method compares light reflected from clean paper
+                with paper after it contacts the skin. Oil can change the paper's
+                appearance. The BH1750 measures light levels, so the result is
+                an estimate, not a clinical sebum test.
             </p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section" id="how-it-works">
-    <div class="section-heading centered">
-        <p class="eyebrow">The process</p>
-        <h2>From measurement to meaning.</h2>
-        <p>Four steps help you understand the readings and their limits.</p>
-    </div>
+    <section class="quote-section">
+        <span class="quote-mark">“</span>
+        <p>We don't guess your skin.<br>We measure it.</p>
+        <span>SkinSense / DermaSense</span>
+    </section>
 
-    <div class="process-grid">
-        <article class="process-card">
-            <span>01</span>
-            <div class="process-symbol">⌁</div>
-            <h3>Calibrate</h3>
+    <section class="section" id="science">
+        <div class="section-heading">
+            <p class="eyebrow">Transparent by design</p>
+            <h2>Science & Accuracy.</h2>
+        </div>
+
+        <div class="science-grid">
+            <div>
+                <h3>Calibration plan</h3>
+                <ul>
+                    <li>Moisture: compare dry-skin and wet-skin references.</li>
+                    <li>pH: use buffer references around pH 4.0 and 9.0.</li>
+                    <li>Oiliness: compare clean paper with oil-saturated paper.</li>
+                </ul>
+
+                <h3>Why these readings?</h3>
+                <p>
+                    Moisture, pH, and surface oil can provide context about how
+                    skin feels and behaves. Readings can vary with placement,
+                    pressure, temperature, products, and calibration.
+                </p>
+
+                <h3>Research references</h3>
+                <p>
+                    Add reviewed research citations here before publication.
+                    Do not present prototype measurements as clinically validated.
+                </p>
+            </div>
+
+            <aside class="notice-card">
+                <p class="eyebrow">Important note</p>
+                <h3>A prototype, with limits.</h3>
+                <p>
+                    DermaSense is intended for educational skin insights. It is
+                    not a clinical diagnostic device and does not replace
+                    professional dermatological advice.
+                </p>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section" id="insights">
+        <div class="section-heading centered">
+            <p class="eyebrow">Read your skin more clearly</p>
+            <h2>Skin Insights.</h2>
+            <p>These skin patterns are educational descriptions, not diagnoses.</p>
+        </div>
+
+        <div class="skin-table">
+            <div class="table-row table-header">
+                <span>Skin pattern</span><span>Possible reading pattern</span><span>Possible focus</span>
+            </div>
+            <div class="table-row">
+                <span>Oily</span><span>Higher surface oil readings</span><span>Lightweight, non-comedogenic products</span>
+            </div>
+            <div class="table-row">
+                <span>Dry</span><span>Lower moisture readings</span><span>Hydration and barrier-support ingredients</span>
+            </div>
+            <div class="table-row">
+                <span>Combination</span><span>Readings vary across areas</span><span>Different areas may have different needs</span>
+            </div>
+            <div class="table-row">
+                <span>Normal</span><span>Relatively balanced readings</span><span>A simple routine that suits your skin</span>
+            </div>
+        </div>
+
+        <div class="method-note">
+            <h3>What your readings mean</h3>
             <p>
-                Prepare the sensors against known reference samples before
-                taking measurements.
-            </p>
-        </article>
-
-        <article class="process-card">
-            <span>02</span>
-            <div class="process-symbol">◉</div>
-            <h3>Measure</h3>
-            <p>
-                Take moisture and pH readings, then use the paper-and-light
-                method to estimate surface oil.
-            </p>
-        </article>
-
-        <article class="process-card">
-            <span>03</span>
-            <div class="process-symbol">✦</div>
-            <h3>See Results</h3>
-            <p>
-                Review each reading in plain language. One reading alone
-                cannot identify or diagnose a skin condition.
-            </p>
-        </article>
-
-        <article class="process-card">
-            <span>04</span>
-            <div class="process-symbol">♡</div>
-            <h3>Explore Guidance</h3>
-            <p>
-                Use educational ingredient suggestions as a starting point
-                for further research and professional advice when needed.
-            </p>
-        </article>
-    </div>
-
-    <div class="method-note">
-        <p class="eyebrow">The oiliness reading</p>
-        <h3>Why blotting paper and light?</h3>
-        <p>
-            The proposed method compares how light reflects from clean paper
-            and paper after it contacts the skin. Oil can change the paper's
-            appearance, and the BH1750 measures light levels. This is an
-            estimate, not a clinical sebum test.
-        </p>
-    </div>
-</section>
-
-<section class="quote-section">
-    <span class="quote-mark">“</span>
-    <p>We don't guess your skin.<br>We measure it.</p>
-    <span>SkinSense / DermaSense</span>
-</section>
-
-<section class="section" id="science">
-    <div class="section-heading">
-        <p class="eyebrow">Transparent by design</p>
-        <h2>Science & Accuracy.</h2>
-    </div>
-
-    <div class="science-grid">
-        <div class="science-content">
-            <h3>Calibration plan</h3>
-            <ul>
-                <li>Moisture: compare dry-skin and wet-skin references.</li>
-                <li>pH: use buffer references around pH 4.0 and 9.0.</li>
-                <li>
-                    Oiliness: compare clean paper with oil-saturated paper.
-                </li>
-            </ul>
-
-            <h3>Why these readings?</h3>
-            <p>
-                Moisture, pH, and surface oil can provide context about how
-                skin feels and behaves. They are only part of the picture.
-                Readings can vary with placement, pressure, temperature,
-                products, and calibration.
-            </p>
-
-            <h3>Research references</h3>
-            <p>
-                Research citations should be reviewed and added here before
-                publication. Do not treat the prototype's measurements as
-                clinically validated.
+                A single measurement cannot determine skin type or sensitivity.
+                pH readings alone do not prove that skin is sensitive. Consider
+                repeated readings as general context and seek professional advice
+                about persistent symptoms.
             </p>
         </div>
 
-        <aside class="notice-card">
-            <p class="eyebrow">Important note</p>
-            <h3>A prototype, with limits.</h3>
+        <div class="ingredient-grid">
+            <article><h3>For dry-feeling skin</h3><p>Explore humectants, ceramides, and gentle moisturizers.</p></article>
+            <article><h3>For oily-feeling skin</h3><p>Explore lightweight hydration and non-comedogenic formulas.</p></article>
+            <article><h3>For easily irritated skin</h3><p>Explore gentle formulas and patch testing.</p></article>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-art">
+            <div class="stem"></div>
+            <div class="leaf leaf-one"></div>
+            <div class="leaf leaf-two"></div>
+            <div class="leaf leaf-three"></div>
+            <div class="about-circle">SS</div>
+        </div>
+
+        <div>
+            <p class="eyebrow">Our story</p>
+            <h2>Science should feel accessible.</h2>
             <p>
-                DermaSense is intended for educational skin insights. It is
-                not a clinical diagnostic device and does not replace
-                professional dermatological advice.
+                SkinSense was created around a simple idea: make practical,
+                science-backed skin analysis more affordable and understandable.
             </p>
-        </aside>
-    </div>
-
-    <div class="comparison-card">
-        <h3>DermaSense and clinical devices</h3>
-        <div class="comparison-row comparison-heading">
-            <span></span>
-            <span>DermaSense</span>
-            <span>Clinical equipment</span>
-        </div>
-        <div class="comparison-row">
-            <span>Purpose</span>
-            <span>Educational prototype</span>
-            <span>Used for specific clinical purposes</span>
-        </div>
-        <div class="comparison-row">
-            <span>Interpretation</span>
-            <span>General learning, not diagnosis</span>
-            <span>Interpreted by qualified professionals</span>
-        </div>
-        <div class="comparison-row">
-            <span>Validation</span>
-            <span>Prototype testing is ongoing</span>
-            <span>Depends on the device and its approved use</span>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="insights">
-    <div class="section-heading centered">
-        <p class="eyebrow">Read your skin more clearly</p>
-        <h2>Skin Insights.</h2>
-        <p>
-            Skin type patterns are educational descriptions, not diagnoses.
-        </p>
-    </div>
-
-    <div class="skin-table">
-        <div class="table-row table-header">
-            <span>Skin pattern</span>
-            <span>Possible reading pattern</span>
-            <span>Educational focus</span>
-        </div>
-
-        <div class="table-row">
-            <span>Oily</span>
-            <span>Higher surface oil readings</span>
-            <span>Consider lightweight, non-comedogenic products</span>
-        </div>
-
-        <div class="table-row">
-            <span>Dry</span>
-            <span>Lower moisture readings</span>
-            <span>Explore hydration and barrier-support ingredients</span>
-        </div>
-
-        <div class="table-row">
-            <span>Combination</span>
-            <span>Readings vary across facial areas</span>
-            <span>Consider that different areas may have different needs</span>
-        </div>
-
-        <div class="table-row">
-            <span>Normal</span>
-            <span>Readings appear relatively balanced</span>
-            <span>Maintain a simple routine that suits your skin</span>
-        </div>
-    </div>
-
-    <div class="insight-note">
-        <h3>What your readings mean</h3>
-        <p>
-            A single measurement cannot determine your skin type or
-            sensitivity. pH readings alone do not prove that skin is
-            sensitive. Use repeated readings as general context, and seek
-            professional advice about persistent symptoms.
-        </p>
-    </div>
-
-    <div class="ingredient-grid">
-        <article>
-            <h3>For dry-feeling skin</h3>
-            <p>Explore humectants, ceramides, and gentle moisturizers.</p>
-        </article>
-        <article>
-            <h3>For oily-feeling skin</h3>
-            <p>Explore lightweight hydration and non-comedogenic formulas.</p>
-        </article>
-        <article>
-            <h3>For easily irritated skin</h3>
-            <p>Explore gentle, fragrance-free options and patch testing.</p>
-        </article>
-    </div>
-</section>
-
-<section class="about-section" id="about">
-    <div class="about-art">
-        <div class="stem"></div>
-        <div class="leaf leaf-one"></div>
-        <div class="leaf leaf-two"></div>
-        <div class="leaf leaf-three"></div>
-        <div class="about-circle">SS</div>
-    </div>
-
-    <div class="about-copy">
-        <p class="eyebrow">Our story</p>
-        <h2>Science should feel accessible.</h2>
-        <p>
-            SkinSense was created around a simple idea: make practical,
-            science-backed skin analysis easier to understand and more
-            affordable.
-        </p>
-        <p>
-            We want to build with care, explain what the device can and
-            cannot tell you, and keep improving through testing.
-        </p>
-
-        <div class="values">
-            <span>Science-backed</span>
-            <span>Accessible</span>
-            <span>Transparent</span>
-        </div>
-
-        <div class="roadmap">
-            <h3>What's ahead</h3>
+            <p>
+                Our mission is affordable, science-backed skin analysis for
+                everyone. We aim to explain what the device can and cannot tell you.
+            </p>
+            <div class="values">
+                <span>Science-backed</span><span>Accessible</span><span>Transparent</span>
+            </div>
+            <h3 class="roadmap-title">What's ahead</h3>
             <p>Prototype refinement, calibration tests, user feedback, and clearer skin education.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="form-panel" id="contact">
-    <div>
-        <p class="eyebrow">Contact & Support</p>
-        <h2>Questions?<br>Let's talk.</h2>
-        <p>
-            Ask about setup, calibration, troubleshooting, shipping, returns,
-            or the DermaSense project.
-        </p>
-        <p class="placeholder-note">
-            Replace this note with your real support email and response time
-            before publishing.
-        </p>
-    </div>
+    <section class="form-panel" id="contact">
+        <div>
+            <p class="eyebrow">Contact & Support</p>
+            <h2>Questions?<br>Let's talk.</h2>
+            <p>
+                Ask about setup, calibration, troubleshooting, shipping,
+                returns, or the DermaSense project.
+            </p>
+            <p class="small-note">
+                Replace this note with your real support email and response time
+                before publishing.
+            </p>
+        </div>
 
-    <form onsubmit="return false;">
-        <label for="contact-name">Name</label>
-        <input id="contact-name" type="text" placeholder="Your name">
+        <form onsubmit="return false;">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" type="text" placeholder="Your name">
 
-        <label for="contact-email">Email</label>
-        <input id="contact-email" type="email" placeholder="you@example.com">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" type="email" placeholder="you@example.com">
 
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" placeholder="How can we help?"></textarea>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" placeholder="How can we help?"></textarea>
 
-        <button class="dark-button" type="submit">Send Message</button>
-    </form>
-</section>
+            <button class="dark-button" type="submit">Send Message</button>
+        </form>
+    </section>
 
-<section class="faq-section">
-    <p class="eyebrow">A few helpful answers</p>
-    <h2>Frequently asked questions</h2>
+    <section class="faq-section">
+        <p class="eyebrow">Helpful answers</p>
+        <h2>Frequently asked questions</h2>
 
-    <details>
-        <summary>Does DermaSense replace a dermatologist?</summary>
-        <p>No. It is an educational prototype, not a diagnostic device.</p>
-    </details>
+        <details>
+            <summary>Does DermaSense replace a dermatologist?</summary>
+            <p>No. It is an educational prototype, not a diagnostic device.</p>
+        </details>
+        <details>
+            <summary>Will I need to calibrate the device?</summary>
+            <p>Follow the final product's calibration instructions when available.</p>
+        </details>
+        <details>
+            <summary>Where are shipping and return details?</summary>
+            <p>Add confirmed shipping and return information before accepting orders.</p>
+        </details>
+    </section>
 
-    <details>
-        <summary>Will I need to calibrate the device?</summary>
-        <p>
-            The prototype is designed around calibration references. Follow
-            the final product instructions when they are available.
-        </p>
-    </details>
+    <section class="waitlist-panel" id="waitlist">
+        <div>
+            <p class="eyebrow">Early access</p>
+            <h2>Be the First to Try DermaSense.</h2>
+            <p>Join the waitlist to follow affordable, practical skin analysis.</p>
+        </div>
 
-    <details>
-        <summary>Is shipping or returns information available?</summary>
-        <p>
-            Add confirmed shipping and return details here before accepting
-            orders.
-        </p>
-    </details>
-</section>
+        <form onsubmit="showWaitlistMessage(); return false;">
+            <label for="waitlist-name">Name</label>
+            <input id="waitlist-name" type="text" placeholder="Your name" required>
 
-<section class="waitlist-panel" id="waitlist">
-    <div>
-        <p class="eyebrow">Early access</p>
-        <h2>Be the First to Try DermaSense.</h2>
-        <p>
-            Join the waitlist to follow the journey of affordable,
-            practical skin analysis.
-        </p>
-    </div>
+            <label for="waitlist-email">Email</label>
+            <input id="waitlist-email" type="email" placeholder="you@example.com" required>
 
-    <form onsubmit="showWaitlistMessage(); return false;">
-        <label for="waitlist-name">Name</label>
-        <input id="waitlist-name" type="text" placeholder="Your name" required>
+            <label for="waitlist-skin">Optional skin type</label>
+            <select id="waitlist-skin">
+                <option>Prefer not to say</option>
+                <option>Oily</option>
+                <option>Dry</option>
+                <option>Combination</option>
+                <option>Normal</option>
+            </select>
 
-        <label for="waitlist-email">Email</label>
-        <input id="waitlist-email" type="email" placeholder="you@example.com" required>
-
-        <label for="waitlist-skin">Optional skin type</label>
-        <select id="waitlist-skin">
-            <option>Prefer not to say</option>
-            <option>Oily</option>
-            <option>Dry</option>
-            <option>Combination</option>
-            <option>Normal</option>
-        </select>
-
-        <button class="light-button" type="submit">Join the Waitlist</button>
-        <p id="waitlist-confirmation" class="confirmation"></p>
-    </form>
-</section>
-
+            <button class="light-button" type="submit">Join the Waitlist</button>
+            <p id="waitlist-confirmation"></p>
+        </form>
+    </section>
 </main>
 
 <footer class="site-footer">
-    <div class="footer-logo">
-<img class="brand-logo" src="logo.png" alt="SkinSense logo">
-    </div>
-
+    [image removed]
     <div>
         <p>We don't guess your skin. We measure it.</p>
         <p class="footer-small">
@@ -495,37 +395,28 @@
             professional dermatological advice.
         </p>
     </div>
-
     <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#product">Product</a>
         <a href="login.html">Log In</a>
         <a href="signup.html">Sign Up</a>
     </div>
-
     <p class="copyright">Copyright 2026 SkinSense</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
 <script>
-window.addEventListener("load", function () {
-    var splash = document.getElementById("splash-screen");
+    startHomePage();
 
-    setTimeout(function () {
-        if (splash) {
-            splash.classList.add("splash-hidden");
+    function showWaitlistMessage() {
+        var message = document.getElementById("waitlist-confirmation");
+
+        if (message) {
+            message.textContent =
+                "Thanks for your interest in DermaSense.";
         }
-    }, 1600);
-});
-
-function showWaitlistMessage() {
-    var message = document.getElementById("waitlist-confirmation");
-
-    if (message) {
-        message.innerHTML =
-            "Thank you. Your details have been entered on this page.";
     }
-}
 </script>
-
 </body>
 </html>
