@@ -69,6 +69,22 @@ async function ensureUsername(user) {
     return username;
 }
 
+const profileResult = await supabaseClient
+    .from("profiles")
+    .upsert(
+        {
+            user_id: user.id,
+            username: username
+        },
+        {
+            onConflict: "user_id"
+        }
+    );
+
+if (profileResult.error) {
+    console.error("Could not save profile:", profileResult.error.message);
+}
+
 function showHomeProfile(username) {
     const label = document.getElementById("profile-label");
     const profileLink = document.getElementById("profile-link");
