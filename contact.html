@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Support | SkinSense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a class="brand" href="index.html">
+        <img src="logo.png" alt="SkinSense logo">
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="science.html">Science</a>
+        <a href="skin-insights.html">Insights</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="waitlist.html">Waitlist</a>
+    </nav>
+</header>
+
+<main>
+
+        <section class="page-hero">
+            <p class="eyebrow">We would love to hear from you</p>
+            <h1>Contact & Support.</h1>
+            <p>
+                Have a question about DermaSense? Send us a message.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <form onsubmit="return false;">
+                <label for="contact-name">Name</label>
+                <input id="contact-name" type="text" placeholder="Your name">
+
+                <label for="contact-email">Email</label>
+                <input id="contact-email" type="email" placeholder="you@example.com">
+
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" placeholder="How can we help?"></textarea>
+
+                <button class="button" type="submit">
+                    Send Message
+                </button>
+            </form>
+        </section>
+
+        <section class="cream-section">
+            <h2>Frequently asked questions</h2>
+
+            <h3>Does DermaSense replace a dermatologist?</h3>
+            <p>
+                No. It is designed for educational guidance and personal
+                awareness.
+            </p>
+
+            <h3>Can I use one reading as a diagnosis?</h3>
+            <p>
+                No. Repeated readings and professional advice are more reliable.
+            </p>
+
+            <h3>How do I calibrate the device?</h3>
+            <p>
+                Follow the calibration instructions for moisture, pH, and
+                oiliness references.
+            </p>
+
+            <h3>How can I get product updates?</h3>
+            <p>
+                Join the waitlist to receive future DermaSense announcements.
+            </p>
+        </section>
+        
+</main>
+
+<footer>
+    <img src="logo.png" alt="SkinSense logo">
+
+    <p>
+        We don't guess your skin. We measure it.
+    </p>
+
+    <p class="small">
+        DermaSense provides educational guidance and does not replace
+        professional dermatological advice.
+    </p>
+</footer>
+
+<script>
+function showMessage() {
+    var message = document.getElementById("confirmation");
+
+    if (message) {
+        message.innerHTML =
+            "Thank you. You have been added to the SkinSense waitlist.";
+    }
+}
+</script>
+
+</body>
+</html>

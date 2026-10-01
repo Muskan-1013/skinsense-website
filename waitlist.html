@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the SkinSense Waitlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a class="brand" href="index.html">
+        <img src="logo.png" alt="SkinSense logo">
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="science.html">Science</a>
+        <a href="skin-insights.html">Insights</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="waitlist.html">Waitlist</a>
+    </nav>
+</header>
+
+<main>
+
+        <section class="waitlist-box">
+            <p class="eyebrow">Early access</p>
+
+            <h1>Be the First to Try DermaSense.</h1>
+
+            <p>
+                Leave your details below and follow the journey of affordable
+                skin analysis.
+            </p>
+
+            <form onsubmit="showMessage(); return false;">
+                <label for="waitlist-name">Name</label>
+                <input id="waitlist-name" type="text" placeholder="Your name">
+
+                <label for="waitlist-email">Email</label>
+                <input id="waitlist-email" type="email" placeholder="you@example.com">
+
+                <label for="skin-type">Skin type</label>
+                <select id="skin-type">
+                    <option>Prefer not to say</option>
+                    <option>Oily</option>
+                    <option>Dry</option>
+                    <option>Combination</option>
+                    <option>Normal</option>
+                </select>
+
+                <button class="button" type="submit">
+                    Join the Waitlist
+                </button>
+
+                <p id="confirmation" class="confirmation"></p>
+            </form>
+        </section>
+        
+</main>
+
+<footer>
+    <img src="logo.png" alt="SkinSense logo">
+
+    <p>
+        We don't guess your skin. We measure it.
+    </p>
+
+    <p class="small">
+        DermaSense provides educational guidance and does not replace
+        professional dermatological advice.
+    </p>
+</footer>
+
+<script>
+function showMessage() {
+    var message = document.getElementById("confirmation");
+
+    if (message) {
+        message.innerHTML =
+            "Thank you. You have been added to the SkinSense waitlist.";
+    }
+}
+</script>
+
+</body>
+</html>
