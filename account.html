@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Account | SkinSense</title>
+    <title>Your Profile | SkinSense</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body onload="loadAccount()">
-    <main class="auth-page">
-        <section class="auth-card">
-            <h1>Your SkinSense account.</h1>
 
-            <p>You are logged in as:</p>
+<header class="site-header">
+    <a class="brand-logo" href="index.html" role="img" aria-label="SkinSense home"></a>
+    <a class="dark-button" href="index.html">Back to SkinSense</a>
+</header>
 
-            <strong id="account-email"></strong>
+<main class="auth-page">
+    <section class="auth-card">
+        <div class="profile-avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21c0-4.5 3.2-7 8-7s8 2.5 8 7"></path>
+            </svg>
+        </div>
 
-            <button class="dark-button" onclick="logoutUser()">
-                Log Out
-            </button>
+        <p class="eyebrow">Your profile</p>
+        <h1 id="account-username">Loading profile…</h1>
 
-            <a href="index.html">
-                Back to SkinSense
-            </a>
-        </section>
-    </main>
+        <button class="dark-button" type="button" onclick="logoutUser()">
+            Log Out
+        </button>
+    </section>
+</main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
 </body>
 </html>

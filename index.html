@@ -10,7 +10,7 @@
 
 <div class="splash-screen" id="splash-screen">
     <div class="splash-content">
-        [image removed]
+        <div class="brand-logo splash-logo" role="img" aria-label="SkinSense logo"></div>
         <p class="eyebrow">SKINSENSE</p>
         <h1>Know Your Skin.</h1>
         <p>Care better with clearer insight.</p>
@@ -19,9 +19,7 @@
 </div>
 
 <header class="site-header">
-    <a class="brand" href="#home">
-        [image removed]
-    </a>
+    <a class="brand-logo" href="#home" role="img" aria-label="SkinSense home"></a>
 
     <nav class="navigation">
         <a href="#home">Home</a>
@@ -35,8 +33,26 @@
 
     <div class="account-links">
         <span id="profile-label" hidden></span>
-        <a id="profile-link" href="account.html" hidden>My Profile</a>
-        <button id="logout-button" onclick="logoutUser()" hidden>Log Out</button>
+
+        <a id="profile-link"
+           class="profile-icon"
+           href="account.html"
+           aria-label="Profile"
+           title="Profile"
+           hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 21c0-4.5 3.2-7 8-7s8 2.5 8 7"></path>
+            </svg>
+        </a>
+
+        <button id="logout-button"
+                class="logout-button"
+                type="button"
+                onclick="logoutUser()"
+                hidden>
+            Log Out
+        </button>
     </div>
 </header>
 
@@ -60,7 +76,9 @@
 
         <div class="hero-art">
             <p class="art-label">DERMASENSE / 01</p>
-            [image removed]
+            <div class="device-photo"
+                 role="img"
+                 aria-label="DermaSense skincare analysis device"></div>
             <p class="art-caption">Measure. Understand. Care.</p>
             <span class="decorative-dot dot-one"></span>
             <span class="decorative-dot dot-two"></span>
@@ -117,37 +135,37 @@
                 </p>
             </article>
         </div>
-    </section>
 
-    <section class="product-panel">
-        <div>
-            <p class="eyebrow">Meet the device</p>
-            <h2>Small device.<br>Clearer skin insights.</h2>
-            <p>
-                DermaSense brings together simple sensors, a compact display,
-                and ingredient education to make skin analysis more approachable.
-            </p>
-            <a class="dark-button" href="#waitlist">Join the Waitlist</a>
-        </div>
-
-        <div class="spec-card">
-            <p class="eyebrow">Technical notes</p>
-            <div class="spec-list">
-                <div><span>Controller</span><strong>ESP32</strong></div>
-                <div><span>Moisture sensor</span><strong>YL-69</strong></div>
-                <div><span>pH sensor</span><strong>PH-4502C</strong></div>
-                <div><span>Light sensor</span><strong>BH1750</strong></div>
-                <div><span>Display</span><strong>16x2 LCD</strong></div>
-                <div><span>Estimated project cost</span><strong>About Rs. 2,500</strong></div>
+        <div class="product-panel">
+            <div>
+                <p class="eyebrow">Meet the device</p>
+                <h2>Small device.<br>Clearer skin insights.</h2>
+                <p>
+                    DermaSense brings together simple sensors, a compact display,
+                    and ingredient education to make skin analysis more approachable.
+                </p>
+                <a class="dark-button" href="#waitlist">Join the Waitlist</a>
             </div>
 
-            <div class="box-note">
-                <h3>What's in the box?</h3>
-                <p>
-                    Planned contents include the DermaSense device, sensors,
-                    display, and calibration guide. Final contents may change
-                    as the prototype develops.
-                </p>
+            <div class="spec-card">
+                <p class="eyebrow">Technical notes</p>
+                <div class="spec-list">
+                    <div><span>Controller</span><strong>ESP32</strong></div>
+                    <div><span>Moisture sensor</span><strong>YL-69</strong></div>
+                    <div><span>pH sensor</span><strong>PH-4502C</strong></div>
+                    <div><span>Light sensor</span><strong>BH1750</strong></div>
+                    <div><span>Display</span><strong>16x2 LCD</strong></div>
+                    <div><span>Estimated project cost</span><strong>About Rs. 2,500</strong></div>
+                </div>
+
+                <div class="box-note">
+                    <h3>What's in the box?</h3>
+                    <p>
+                        Planned contents include the DermaSense device, sensors,
+                        display, and calibration guide. Final contents may change
+                        as the prototype develops.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -387,7 +405,7 @@
 </main>
 
 <footer class="site-footer">
-    [image removed]
+    <div class="brand-logo footer-logo" role="img" aria-label="SkinSense logo"></div>
     <div>
         <p>We don't guess your skin. We measure it.</p>
         <p class="footer-small">

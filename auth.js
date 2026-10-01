@@ -17,13 +17,65 @@ const supabaseClient = window.supabase.createClient(
     }
 );
 
-function showHomeProfile(user) {
+function makeUsername(email) {
+    const localPart = (email || "skin")
+        .split("@")[0]
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
+    const prefix = localPart.slice(0, 6) || "skin";
+    const number = Math.floor(1000 + Math.random() * 9000);
+
+    return prefix + "_" + number;
+}
+
+async function ensureUsername(user) {
+    const metadata = user.user_metadata || {};
+    const storageKey = "skinsense_username_" + user.id;
+    let username = metadata.username || "";
+
+    if (!username) {
+        try {
+            username = localStorage.getItem(storageKey) || "";
+        } catch (error) {
+            username = "";
+        }
+    }
+
+    if (!username) {
+        username = makeUsername(user.email);
+    }
+
+    if (!metadata.username) {
+        const result = await supabaseClient.auth.updateUser({
+            data: { username: username }
+        });
+
+        if (
+            !result.error &&
+            result.data.user &&
+            result.data.user.user_metadata.username
+        ) {
+            username = result.data.user.user_metadata.username;
+        }
+    }
+
+    try {
+        localStorage.setItem(storageKey, username);
+    } catch (error) {
+        // Supabase user metadata remains the saved username when available.
+    }
+
+    return username;
+}
+
+function showHomeProfile(username) {
     const label = document.getElementById("profile-label");
     const profileLink = document.getElementById("profile-link");
     const logoutButton = document.getElementById("logout-button");
 
     if (label) {
-        label.textContent = user.email;
+        label.textContent = username;
         label.hidden = false;
     }
 
@@ -44,7 +96,8 @@ async function startHomePage() {
         return;
     }
 
-    showHomeProfile(result.data.session.user);
+    const username = await ensureUsername(result.data.session.user);
+    showHomeProfile(username);
 
     const splash = document.getElementById("splash-screen");
 
@@ -62,8 +115,8 @@ async function startHomePage() {
             return;
         }
 
-        if (session) {
-            showHomeProfile(session.user);
+        if (session && session.user.user_metadata.username) {
+            showHomeProfile(session.user.user_metadata.username);
         }
     });
 }
@@ -80,11 +133,13 @@ async function signUpUser() {
     const email = document.getElementById("signup-email").value;
     const password = document.getElementById("signup-password").value;
     const message = document.getElementById("signup-message");
+    const username = makeUsername(email);
 
     const result = await supabaseClient.auth.signUp({
         email: email,
         password: password,
         options: {
+            data: { username: username },
             emailRedirectTo: window.location.origin + "/index.html"
         }
     });
@@ -94,7 +149,8 @@ async function signUpUser() {
         return;
     }
 
-    if (result.data.session) {
+    if (result.data.session && result.data.user) {
+        await ensureUsername(result.data.user);
         window.location.replace("index.html");
         return;
     }
@@ -118,6 +174,7 @@ async function loginUser() {
         return;
     }
 
+    await ensureUsername(result.data.user);
     window.location.replace("index.html");
 }
 
@@ -156,8 +213,7 @@ async function sendPasswordReset() {
 
 async function updatePassword() {
     const password = document.getElementById("new-password").value;
-    const message =
-        document.getElementById("update-password-message");
+    const message = document.getElementById("update-password-message");
 
     const result = await supabaseClient.auth.updateUser({
         password: password
@@ -179,10 +235,11 @@ async function loadAccount() {
         return;
     }
 
-    const email = document.getElementById("account-email");
+    const username = await ensureUsername(result.data.user);
+    const nameElement = document.getElementById("account-username");
 
-    if (email) {
-        email.textContent = result.data.user.email;
+    if (nameElement) {
+        nameElement.textContent = username;
     }
 }
 
