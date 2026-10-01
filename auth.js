@@ -104,37 +104,66 @@ function showHomeProfile(username) {
     }
 }
 
-async function startHomePage() {
-    const result = await supabaseClient.auth.getSession();
-
-    if (result.error || !result.data.session) {
-        window.location.replace("signup.html");
-        return;
-    }
-
-    const username = await ensureUsername(result.data.session.user);
-    showHomeProfile(username);
-
+function finishHomeStartup() {
     const splash = document.getElementById("splash-screen");
 
-    window.setTimeout(function () {
-        if (splash) {
-            splash.classList.add("splash-hidden");
+    if (splash) {
+        splash.classList.add("splash-hidden");
+    }
+
+    document.body.classList.remove("auth-checking");
+}
+
+async function startHomePage() {
+    const sessionTimeout = window.setTimeout(function () {
+        window.location.replace("login.html");
+    }, 12000);
+
+    try {
+        const result = await supabaseClient.auth.getSession();
+
+        window.clearTimeout(sessionTimeout);
+
+        if (result.error) {
+            throw result.error;
         }
 
-        document.body.classList.remove("auth-checking");
-    }, 1600);
-
-    supabaseClient.auth.onAuthStateChange(function (event, session) {
-        if (event === "SIGNED_OUT") {
+        if (!result.data.session) {
             window.location.replace("signup.html");
             return;
         }
 
-        if (session && session.user.user_metadata.username) {
-            showHomeProfile(session.user.user_metadata.username);
-        }
-    });
+        const user = result.data.session.user;
+        const savedUsername =
+            user.user_metadata && user.user_metadata.username;
+
+        showHomeProfile(savedUsername || makeUsername(user.email));
+
+        window.setTimeout(finishHomeStartup, 1600);
+
+        ensureUsername(user)
+            .then(function (username) {
+                showHomeProfile(username);
+            })
+            .catch(function (error) {
+                console.error("Could not update username:", error);
+            });
+
+        supabaseClient.auth.onAuthStateChange(function (event, session) {
+            if (event === "SIGNED_OUT") {
+                window.location.replace("signup.html");
+                return;
+            }
+
+            if (session && session.user.user_metadata.username) {
+                showHomeProfile(session.user.user_metadata.username);
+            }
+        });
+    } catch (error) {
+        window.clearTimeout(sessionTimeout);
+        console.error("Could not check the sign-in session:", error);
+        window.location.replace("login.html");
+    }
 }
 
 async function redirectIfLoggedIn() {
