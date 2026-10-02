@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore SkinSense and the DermaSense skin-analysis prototype.">
     <title>SkinSense | Know Your Skin, Care Better</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body class="auth-checking">
 
 <div class="splash-screen" id="splash-screen">
     <div class="splash-content">
-        [image removed]
+        <p class="splash-wordmark">SkinSense</p>
         <p class="eyebrow">Know your skin. Care better.</p>
         <div class="loading-line"><span></span></div>
     </div>
@@ -25,7 +25,7 @@
     <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#product">DermaSense</a>
-        <a href="#features">What It Measures</a>
+        <a href="#features">Measurements</a>
         <a href="#how-it-works">How to Use</a>
         <a href="#science">Science</a>
         <a href="#about">About</a>
@@ -62,25 +62,13 @@
 
         <h1 class="hero-title">SKINSENSE</h1>
 
-        <div class="hero-layout">
-            <div class="hero-copy">
-                <p class="hero-kicker">Meet DermaSense</p>
-                <h2>Know your skin.<br>Care better.</h2>
-                <p>
-                    DermaSense is a skin-analysis prototype designed to explore
-                    moisture, pH, and surface-oil readings in one compact device.
-                </p>
-                <a class="primary-button" href="#product">Explore DermaSense</a>
-            </div>
-
-            <div class="hero-visual">
-                <div class="hero-circle"></div>
-                [image removed]
-                <span class="hero-stamp">MEASURE<br>UNDERSTAND<br>CARE</span>
-            </div>
+        <div class="hero-visual">
+            <div class="hero-circle" aria-hidden="true"></div>
+            [image removed]
+            <span class="hero-stamp">MEASURE<br>UNDERSTAND<br>CARE</span>
         </div>
 
-        <div class="hero-bottom-note">
+        <div class="hero-bottom-note" aria-label="DermaSense measurement areas">
             <span>MOISTURE</span>
             <span>pH</span>
             <span>SURFACE OIL</span>
@@ -88,12 +76,13 @@
     </section>
 
     <section class="intro-section">
-        <p class="eyebrow">A clearer starting point</p>
-        <h2>Skin insights without the guesswork.</h2>
+        <p class="eyebrow">Meet DermaSense</p>
+        <h2>Know your skin.<br>Care better.</h2>
         <p>
-            SkinSense aims to make skin measurements easier to explore and
-            understand, while being clear about what a prototype can and cannot tell you.
+            DermaSense is a skin-analysis prototype designed to explore
+            moisture, pH, and surface-oil readings in one compact device.
         </p>
+        <a class="primary-button" href="#product">Explore DermaSense</a>
     </section>
 
     <section class="product-section" id="product">
@@ -102,7 +91,7 @@
             <h2>One compact device.<br>Three areas to explore.</h2>
         </div>
 
-        <div class="product-feature-grid">
+        <div class="product-feature-grid" id="features">
             <article class="product-feature-card">
                 <span class="feature-number">01</span>
                 <div class="small-icon moisture-icon" aria-hidden="true">◌</div>
@@ -260,13 +249,11 @@
         </div>
     </section>
 
-    <section class="insights-section" id="features">
+    <section class="insights-section">
         <div class="section-heading centered-heading">
             <p class="eyebrow">What the readings can help explore</p>
             <h2>Three readings. A more informed conversation.</h2>
-            <p>
-                These are areas to explore, not medical conclusions.
-            </p>
+            <p>These are areas to explore, not medical conclusions.</p>
         </div>
 
         <article class="insight-row">
