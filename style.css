@@ -1076,87 +1076,36 @@ body.auth-checking .site-footer {
         text-align: left;
     }
 }
-/* Smaller SkinSense images */
 .brand-logo {
-    height: 38px;
-    max-width: 115px;
-    width: 115px;
+    width: 100px !important;
+    height: 34px !important;
 }
 
 .footer-logo {
-    max-height: 48px;
-    max-width: 120px;
-    width: 120px;
+    width: 105px !important;
+    max-height: 38px !important;
 }
 
 .hero-device {
-    height: 300px;
-    max-width: 70%;
-}
-
-.product-device {
-    height: 220px;
-    max-width: 75%;
-}
-
-@media screen and (max-width: 650px) {
-    .hero-visual {
-        min-height: 270px;
-    }
-
-    .hero-device {
-        height: 230px;
-        max-width: 72%;
-    }
-
-    .product-panel-visual {
-        min-height: 210px;
-    }
-
-    .product-device {
-        height: 180px;
-        max-width: 78%;
-    }
-}
-/* Reduce device image sizes */
-.hero-visual {
-    min-height: 280px !important;
-}
-
-.hero-device {
-    width: 155px !important;
-    height: 220px !important;
-    max-width: 60% !important;
+    width: 125px !important;
+    height: 175px !important;
     object-fit: contain;
 }
 
-.product-panel-visual {
-    min-height: 190px !important;
-}
-
 .product-device {
-    width: 130px !important;
-    height: 170px !important;
-    max-width: 65% !important;
+    width: 105px !important;
+    height: 145px !important;
     object-fit: contain;
 }
 
 @media screen and (max-width: 650px) {
-    .hero-visual {
-        min-height: 230px !important;
-    }
-
     .hero-device {
-        width: 125px !important;
-        height: 170px !important;
-    }
-
-    .product-panel-visual {
-        min-height: 160px !important;
-    }
-
-    .product-device {
         width: 105px !important;
-        height: 140px !important;
+        height: 145px !important;
+    }
+
+    .product-device {
+        width: 90px !important;
+        height: 125px !important;
     }
 }
