@@ -1288,3 +1288,56 @@ body.auth-checking .site-footer {
         max-height: 76px !important;
     }
 }
+.hero-visual {
+    min-height: 250px !important;
+}
+
+.hero-circle {
+    width: 220px !important;
+    height: 220px !important;
+}
+
+.hero-visual > img {
+    width: 130px !important;
+    height: 180px !important;
+    max-width: 130px !important;
+    max-height: 180px !important;
+    object-fit: contain !important;
+}
+
+.product-panel-visual {
+    min-height: 185px !important;
+}
+
+.product-panel-visual > img {
+    width: 105px !important;
+    height: 145px !important;
+    max-width: 105px !important;
+    max-height: 145px !important;
+    object-fit: contain !important;
+}
+
+.site-header .brand-link img,
+.site-footer .footer-logo-link img {
+    width: 85px !important;
+    height: 30px !important;
+    max-width: 85px !important;
+    max-height: 30px !important;
+    object-fit: contain !important;
+}
+
+@media screen and (max-width: 650px) {
+    .hero-visual > img {
+        width: 100px !important;
+        height: 140px !important;
+        max-width: 100px !important;
+        max-height: 140px !important;
+    }
+
+    .product-panel-visual > img {
+        width: 80px !important;
+        height: 110px !important;
+        max-width: 80px !important;
+        max-height: 110px !important;
+    }
+}
