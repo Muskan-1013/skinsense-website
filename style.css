@@ -42,14 +42,14 @@ input {
     display: none !important;
 }
 
-/* Hide the main page until the authentication check finishes. */
+/* Hide site content until authentication is checked */
 body.auth-checking .site-header,
 body.auth-checking main,
 body.auth-checking .site-footer {
     visibility: hidden;
 }
 
-/* Splash screen, text only */
+/* Text-only splash screen */
 .splash-screen {
     align-items: center;
     background:
@@ -100,13 +100,8 @@ body.auth-checking .site-footer {
 }
 
 @keyframes loading-bar {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
 
 /* Shared text */
@@ -118,7 +113,7 @@ body.auth-checking .site-footer {
     text-transform: uppercase;
 }
 
-/* Header and navigation */
+/* Header */
 .site-header {
     align-items: center;
     background: var(--skin-white);
@@ -135,14 +130,13 @@ body.auth-checking .site-footer {
     flex-shrink: 0;
 }
 
-/* Header logo, using logo.png in the HTML */
 .brand-logo {
     display: block;
-    height: 25px;
-    max-height: 25px;
-    max-width: 25px;
+    height: 24px;
+    max-height: 24px;
+    max-width: 70px;
     object-fit: contain;
-    width: 25px;
+    width: 70px;
 }
 
 .main-nav,
@@ -226,11 +220,11 @@ body.auth-checking .site-footer {
 .hero-title {
     color: var(--skin-ink);
     font-family: Georgia, serif;
-    font-size: clamp(76px, 17vw, 220px);
+    font-size: clamp(62px, 12vw, 150px);
     font-weight: normal;
     letter-spacing: -.085em;
-    line-height: .82;
-    margin: 22px auto -22px;
+    line-height: .88;
+    margin: 22px auto -10px;
     overflow-wrap: anywhere;
     position: relative;
     text-align: center;
@@ -241,27 +235,26 @@ body.auth-checking .site-footer {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 100px;
+    min-height: 220px;
     position: relative;
 }
 
 .hero-circle {
     background: rgba(94, 163, 217, .16);
     border-radius: 50%;
-    height: min(36vw, 390px);
+    height: 200px;
     position: absolute;
-    width: min(50vw, 50px);
+    width: 200px;
 }
 
-/* Hero device, using device.png in the HTML */
 .hero-device {
     display: block;
-    height: 100px;
-    max-height: 100px;
-    max-width: 70%;
+    height: 120px;
+    max-height: 120px;
+    max-width: 85px;
     object-fit: contain;
     position: relative;
-    width: 100px;
+    width: 85px;
     z-index: 1;
 }
 
@@ -272,15 +265,15 @@ body.auth-checking .site-footer {
     border-radius: 50%;
     color: var(--skin-navy);
     display: flex;
-    font-size: 9px;
-    height: 72px;
+    font-size: 8px;
+    height: 62px;
     justify-content: center;
     line-height: 1.5;
     position: absolute;
-    right: 3%;
+    right: 8%;
     text-align: center;
-    top: 60%;
-    width: 72px;
+    top: 58%;
+    width: 62px;
     z-index: 2;
 }
 
@@ -477,18 +470,17 @@ body.auth-checking .site-footer {
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    min-height: 190px;
+    min-height: 150px;
     overflow: hidden;
 }
 
-/* Product-panel device, using device.png in the HTML */
 .product-device {
     display: block;
-    height: 170px;
-    max-height: 170px;
-    max-width: 70%;
+    height: 100px;
+    max-height: 100px;
+    max-width: 70px;
     object-fit: contain;
-    width: 130px;
+    width: 70px;
 }
 
 /* How-to cards */
@@ -820,7 +812,7 @@ body.auth-checking .site-footer {
     color: var(--skin-white);
     display: grid;
     gap: 24px;
-    grid-template-columns: 120px 1fr 1fr;
+    grid-template-columns: 90px 1fr 1fr;
     padding: 42px max(28px, calc((100% - 1180px) / 2));
 }
 
@@ -831,10 +823,11 @@ body.auth-checking .site-footer {
 
 .footer-logo {
     display: block;
-    max-height: 25px;
-    max-width: 25px;
+    height: 24px;
+    max-height: 24px;
+    max-width: 70px;
     object-fit: contain;
-    width: 25px;
+    width: 70px;
 }
 
 .footer-message > p:first-child {
@@ -1000,25 +993,31 @@ body.auth-checking .site-footer {
     }
 
     .hero-title {
-        font-size: clamp(62px, 17vw, 112px);
+        font-size: clamp(42px, 12vw, 76px);
         letter-spacing: -.08em;
         margin-bottom: 0;
     }
 
     .hero-visual {
-        min-height: 240px;
+        min-height: 180px;
     }
 
     .hero-device {
-        height: 160px;
-        max-height: 160px;
-        max-width: 65%;
-        width: 110px;
+        height: 80px;
+        max-height: 80px;
+        max-width: 58px;
+        width: 58px;
     }
 
     .hero-circle {
-        height: 220px;
-        width: 220px;
+        height: 150px;
+        width: 150px;
+    }
+
+    .hero-stamp {
+        height: 50px;
+        right: 5%;
+        width: 50px;
     }
 
     .hero-bottom-note {
@@ -1044,14 +1043,14 @@ body.auth-checking .site-footer {
     }
 
     .product-panel-visual {
-        min-height: 150px;
+        min-height: 115px;
     }
 
     .product-device {
-        height: 125px;
-        max-height: 125px;
-        max-width: 65%;
-        width: 90px;
+        height: 65px;
+        max-height: 65px;
+        max-width: 48px;
+        width: 48px;
     }
 
     .insight-row {
@@ -1106,77 +1105,5 @@ body.auth-checking .site-footer {
     .footer-copyright {
         margin-top: 24px;
         text-align: left;
-    }
-}
-/* Smaller SkinSense heading and images */
-.hero-section .hero-title {
-    font-size: clamp(48px, 10vw, 140px) !important;
-    margin-bottom: 0;
-}
-
-.site-header .brand-logo,
-.site-footer .footer-logo {
-    width: 90px !important;
-    height: 32px !important;
-    max-width: 90px !important;
-    max-height: 32px !important;
-    object-fit: contain;
-}
-
-.hero-visual {
-    min-height: 250px !important;
-}
-
-.hero-circle {
-    width: 250px !important;
-    height: 250px !important;
-}
-
-.hero-visual .hero-device {
-    width: 120px !important;
-    height: 170px !important;
-    max-width: 120px !important;
-    max-height: 170px !important;
-    object-fit: contain;
-}
-
-.product-panel-visual {
-    min-height: 180px !important;
-}
-
-.product-panel-visual .product-device {
-    width: 100px !important;
-    height: 140px !important;
-    max-width: 100px !important;
-    max-height: 140px !important;
-    object-fit: contain;
-}
-
-@media screen and (max-width: 650px) {
-    .hero-section .hero-title {
-        font-size: clamp(40px, 12vw, 76px) !important;
-    }
-
-    .hero-visual {
-        min-height: 210px !important;
-    }
-
-    .hero-circle {
-        width: 190px !important;
-        height: 190px !important;
-    }
-
-    .hero-visual .hero-device {
-        width: 95px !important;
-        height: 135px !important;
-        max-width: 95px !important;
-        max-height: 135px !important;
-    }
-
-    .product-panel-visual .product-device {
-        width: 80px !important;
-        height: 110px !important;
-        max-width: 80px !important;
-        max-height: 110px !important;
     }
 }
