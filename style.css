@@ -1118,3 +1118,45 @@ body.auth-checking .site-footer {
         max-width: 78%;
     }
 }
+/* Reduce device image sizes */
+.hero-visual {
+    min-height: 280px !important;
+}
+
+.hero-device {
+    width: 155px !important;
+    height: 220px !important;
+    max-width: 60% !important;
+    object-fit: contain;
+}
+
+.product-panel-visual {
+    min-height: 190px !important;
+}
+
+.product-device {
+    width: 130px !important;
+    height: 170px !important;
+    max-width: 65% !important;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 650px) {
+    .hero-visual {
+        min-height: 230px !important;
+    }
+
+    .hero-device {
+        width: 125px !important;
+        height: 170px !important;
+    }
+
+    .product-panel-visual {
+        min-height: 160px !important;
+    }
+
+    .product-device {
+        width: 105px !important;
+        height: 140px !important;
+    }
+}
