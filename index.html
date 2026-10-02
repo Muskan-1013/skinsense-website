@@ -25,7 +25,7 @@
     <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#product">DermaSense</a>
-        <a href="#features">Measurements</a>
+        <a href="#measurements">Measurements</a>
         <a href="#how-it-works">How to Use</a>
         <a href="#science">Science</a>
         <a href="#about">About</a>
@@ -58,17 +58,18 @@
 
 <main>
     <section class="hero-section" id="home">
-        <p class="eyebrow hero-eyebrow">Skin analysis, made more accessible</p>
-
-        <h1 class="hero-title">SKINSENSE</h1>
+        <div class="hero-copy">
+            <p class="eyebrow">Skin analysis, made more accessible</p>
+            <h1 class="hero-title">SKINSENSE</h1>
+        </div>
 
         <div class="hero-visual">
             <div class="hero-circle" aria-hidden="true"></div>
-            	<img src="device.png">
+            <img src="device/png">
             <span class="hero-stamp">MEASURE<br>UNDERSTAND<br>CARE</span>
         </div>
 
-        <div class="hero-bottom-note" aria-label="DermaSense measurement areas">
+        <div class="hero-bottom-note">
             <span>MOISTURE</span>
             <span>pH</span>
             <span>SURFACE OIL</span>
@@ -76,61 +77,82 @@
     </section>
 
     <section class="intro-section">
-        <p class="eyebrow">Meet DermaSense</p>
-        <h2>Know your skin.<br>Care better.</h2>
-        <p>
-            DermaSense is a skin-analysis prototype designed to explore
-            moisture, pH, and surface-oil readings in one compact device.
-        </p>
-        <a class="primary-button" href="#product">Explore DermaSense</a>
+        <div class="intro-copy">
+            <p class="eyebrow">Meet DermaSense</p>
+            <h2>Know your skin.<br>Care better.</h2>
+            <p>
+                DermaSense is a skin-analysis prototype designed to explore
+                moisture, pH, and surface-oil readings in one compact device.
+            </p>
+            <a class="primary-button" href="#product">Explore DermaSense</a>
+        </div>
+    </section>
+
+    <section class="measurements-section" id="measurements">
+        <div class="section-heading">
+            <p class="eyebrow">What DermaSense measures</p>
+            <h2>Three areas to explore.</h2>
+            <p>
+                The readings are estimates for learning about the prototype,
+                not medical conclusions.
+            </p>
+        </div>
+
+        <article class="measure-row">
+            <div class="measure-copy">
+                <p class="eyebrow">01 / Moisture</p>
+                <h3>Explore a moisture reading.</h3>
+                <p>
+                    Use the moisture sensor and contact method described in
+                    the instructions for your DermaSense version.
+                </p>
+            </div>
+            <div class="measure-art moisture-art" aria-hidden="true">
+                <span class="measure-art-label">MOISTURE</span>
+                <span class="measure-art-symbol">◌</span>
+            </div>
+        </article>
+
+        <article class="measure-row">
+            <div class="measure-copy">
+                <p class="eyebrow">02 / pH</p>
+                <h3>Review the pH reading carefully.</h3>
+                <p>
+                    Follow the validated probe and calibration instructions.
+                    A pH reading alone cannot diagnose a skin condition.
+                </p>
+            </div>
+            <div class="measure-art ph-art" aria-hidden="true">
+                <span class="measure-art-label">pH READING</span>
+                <span class="measure-art-symbol">pH</span>
+            </div>
+        </article>
+
+        <article class="measure-row">
+            <div class="measure-copy">
+                <p class="eyebrow">03 / Surface oil</p>
+                <h3>Explore the surface-oil estimate.</h3>
+                <p>
+                    Use fresh blotting paper and the light-sensor method
+                    described in the device instructions.
+                </p>
+            </div>
+            <div class="measure-art oil-art" aria-hidden="true">
+                <span class="measure-art-label">SURFACE OIL</span>
+                <span class="measure-art-symbol">◉</span>
+            </div>
+        </article>
     </section>
 
     <section class="product-section" id="product">
-        <div class="section-heading">
-            <p class="eyebrow">Introducing DermaSense</p>
-            <h2>One compact device.<br>Three areas to explore.</h2>
-        </div>
-
-        <div class="product-feature-grid" id="features">
-            <article class="product-feature-card">
-                <span class="feature-number">01</span>
-                <div class="small-icon moisture-icon" aria-hidden="true">◌</div>
-                <h3>Moisture</h3>
-                <p>
-                    Explore a moisture reading using the sensor and method
-                    described in the device instructions.
-                </p>
-            </article>
-
-            <article class="product-feature-card">
-                <span class="feature-number">02</span>
-                <div class="small-icon ph-icon" aria-hidden="true">pH</div>
-                <h3>pH</h3>
-                <p>
-                    View a pH reading only by following the device's
-                    validated probe and calibration instructions.
-                </p>
-            </article>
-
-            <article class="product-feature-card">
-                <span class="feature-number">03</span>
-                <div class="small-icon oil-icon" aria-hidden="true">◉</div>
-                <h3>Surface Oil</h3>
-                <p>
-                    Explore the surface-oil estimate using the blotting-paper
-                    and light-sensor method provided with the device.
-                </p>
-            </article>
-        </div>
-
         <div class="product-panel">
             <div class="product-panel-copy">
-                <p class="eyebrow">The device</p>
-                <h2>Designed to make measurements easier to explore.</h2>
+                <p class="eyebrow">Introducing DermaSense</p>
+                <h2>One compact device.<br>Three areas to explore.</h2>
                 <p>
                     DermaSense brings sensor readings together with a compact
-                    display. The device is a prototype, and its readings should
-                    be treated as estimates rather than a diagnosis.
+                    display. Its readings should be treated as prototype
+                    estimates, not as a diagnosis.
                 </p>
                 <a class="text-link" href="#how-it-works">See how to use it</a>
             </div>
@@ -153,10 +175,7 @@
                 <span class="how-number">01</span>
                 <div class="how-symbol" aria-hidden="true">⌁</div>
                 <h3>Prepare</h3>
-                <p>
-                    Power on the device and prepare the sensors according to
-                    its user guide.
-                </p>
+                <p>Power on the device and prepare the sensors as instructed.</p>
             </article>
 
             <article class="how-card">
@@ -164,8 +183,8 @@
                 <div class="how-symbol" aria-hidden="true">◌</div>
                 <h3>Measure Moisture</h3>
                 <p>
-                    Use the moisture sensor only with the contact method
-                    described in the DermaSense instructions.
+                    Use the sensor only with the contact method described in
+                    the DermaSense guide.
                 </p>
             </article>
 
@@ -174,8 +193,8 @@
                 <div class="how-symbol" aria-hidden="true">pH</div>
                 <h3>Check pH and Oil</h3>
                 <p>
-                    Follow the validated pH-probe instructions. Use fresh
-                    blotting paper for the surface-oil estimate.
+                    Follow the validated pH-probe instructions and use fresh
+                    blotting paper for the oil estimate.
                 </p>
             </article>
 
@@ -184,21 +203,21 @@
                 <div class="how-symbol" aria-hidden="true">♡</div>
                 <h3>Review and Clean</h3>
                 <p>
-                    Review readings as estimates, then clean and store the
+                    Treat readings as estimates, then clean and store the
                     device according to its care instructions.
                 </p>
             </article>
         </div>
 
-        <div class="notice-panel">
+        <aside class="notice-panel">
             <p class="eyebrow">Important</p>
             <h3>Use the validated device instructions.</h3>
             <p>
-                DermaSense readings are for educational use and are not a
-                medical diagnosis. Do not use a probe directly on skin unless
+                DermaSense is a prototype for educational use, not a medical
+                diagnostic device. Do not use a probe directly on skin unless
                 that use has been validated for your device.
             </p>
-        </div>
+        </aside>
     </section>
 
     <section class="quote-band">
@@ -218,8 +237,8 @@
                 <h3>Calibration matters</h3>
                 <p>
                     Sensor readings depend on proper calibration and use.
-                    Follow the device's final instructions for preparing,
-                    calibrating, and cleaning each sensor.
+                    Follow the device instructions for preparing, calibrating,
+                    and cleaning each sensor.
                 </p>
 
                 <h3>Readings are estimates</h3>
@@ -231,7 +250,7 @@
 
                 <h3>Use as educational context</h3>
                 <p>
-                    Consider the readings as general information about the
+                    Consider readings as general information about this
                     prototype, not as medical advice or a replacement for a
                     qualified professional.
                 </p>
@@ -241,65 +260,12 @@
                 <p class="eyebrow">Prototype note</p>
                 <h3>Built to explore, not diagnose.</h3>
                 <p>
-                    DermaSense is a prototype. Its measurement methods and
-                    skin-contact instructions should be validated before
-                    being presented as consumer or clinical guidance.
+                    Validate the measurement methods and skin-contact
+                    instructions before presenting them as consumer or
+                    clinical guidance.
                 </p>
             </aside>
         </div>
-    </section>
-
-    <section class="insights-section">
-        <div class="section-heading centered-heading">
-            <p class="eyebrow">What the readings can help explore</p>
-            <h2>Three readings. A more informed conversation.</h2>
-            <p>These are areas to explore, not medical conclusions.</p>
-        </div>
-
-        <article class="insight-row">
-            <div class="insight-copy">
-                <p class="eyebrow">01 / Moisture</p>
-                <h3>Notice how your skin feels.</h3>
-                <p>
-                    Track moisture estimates over time and consider how they
-                    relate to your routine and environment.
-                </p>
-            </div>
-            <div class="insight-art moisture-art" aria-hidden="true">
-                <span>MOISTURE</span>
-                <strong>◌</strong>
-            </div>
-        </article>
-
-        <article class="insight-row">
-            <div class="insight-copy">
-                <p class="eyebrow">02 / pH</p>
-                <h3>Explore the pH reading carefully.</h3>
-                <p>
-                    A pH reading is one measurement from the device. Follow
-                    its validated procedure and do not treat it as a diagnosis.
-                </p>
-            </div>
-            <div class="insight-art ph-art" aria-hidden="true">
-                <span>pH READING</span>
-                <strong>pH</strong>
-            </div>
-        </article>
-
-        <article class="insight-row">
-            <div class="insight-copy">
-                <p class="eyebrow">03 / Surface oil</p>
-                <h3>Explore the surface-oil estimate.</h3>
-                <p>
-                    Use the specified blotting-paper method and compare
-                    readings only under similar testing conditions.
-                </p>
-            </div>
-            <div class="insight-art oil-art" aria-hidden="true">
-                <span>SURFACE OIL</span>
-                <strong>◉</strong>
-            </div>
-        </article>
     </section>
 
     <section class="about-section" id="about">
@@ -315,14 +281,13 @@
             <p class="eyebrow">Our story</p>
             <h2>Science should feel accessible.</h2>
             <p>
-                SkinSense was created around a simple idea: make skin-analysis
-                concepts more understandable and approachable.
+                SkinSense was created to make skin-analysis concepts more
+                understandable and approachable.
             </p>
             <p>
                 We aim to explain what DermaSense measures, how readings are
-                collected, and where the prototype's limitations are.
+                collected, and where the prototype has limitations.
             </p>
-
             <div class="value-pills">
                 <span>Accessible</span>
                 <span>Transparent</span>
