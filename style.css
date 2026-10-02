@@ -138,11 +138,11 @@ body.auth-checking .site-footer {
 /* Header logo, using logo.png in the HTML */
 .brand-logo {
     display: block;
-    height: 36px;
-    max-height: 36px;
-    max-width: 100px;
+    height: 25px;
+    max-height: 25px;
+    max-width: 25px;
     object-fit: contain;
-    width: 100px;
+    width: 25px;
 }
 
 .main-nav,
@@ -241,7 +241,7 @@ body.auth-checking .site-footer {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 300px;
+    min-height: 100px;
     position: relative;
 }
 
@@ -250,18 +250,18 @@ body.auth-checking .site-footer {
     border-radius: 50%;
     height: min(36vw, 390px);
     position: absolute;
-    width: min(36vw, 390px);
+    width: min(50vw, 50px);
 }
 
 /* Hero device, using device.png in the HTML */
 .hero-device {
     display: block;
-    height: 220px;
-    max-height: 220px;
+    height: 100px;
+    max-height: 100px;
     max-width: 70%;
     object-fit: contain;
     position: relative;
-    width: 160px;
+    width: 100px;
     z-index: 1;
 }
 
@@ -831,10 +831,10 @@ body.auth-checking .site-footer {
 
 .footer-logo {
     display: block;
-    max-height: 36px;
-    max-width: 100px;
+    max-height: 25px;
+    max-width: 25px;
     object-fit: contain;
-    width: 100px;
+    width: 25px;
 }
 
 .footer-message > p:first-child {
