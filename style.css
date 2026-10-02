@@ -1046,61 +1046,68 @@ main {
     }
 }
 :root {
-    --skin-blue: #5EA3D9;
-    --skin-navy: #244D73;
-    --skin-cream: #F3E6D6;
-    --skin-brown: #8C6245;
-    --skin-charcoal: #282B2B;
+    --skin-page: #EEF4FC;
     --skin-white: #FFFFFF;
+    --skin-soft-blue: #DCEAF7;
+    --skin-blue: #5EA3D9;
+    --skin-lavender: #AAA4E5;
+    --skin-navy: #244D73;
+    --skin-ink: #282B2B;
+    --skin-muted: #65758A;
 }
 
-/* Main page */
+/* Cool, pale-blue page background */
 body {
-    background: var(--skin-cream);
-    color: var(--skin-charcoal);
+    background: var(--skin-page) !important;
+    color: var(--skin-ink);
 }
 
-/* Splash screen */
-.splash-screen {
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.75), transparent 28%),
-        linear-gradient(135deg, var(--skin-cream), #ead7c1);
+/* Clean white header */
+.site-header {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(36, 77, 115, 0.1);
+    border-radius: 18px;
+    margin-top: 14px;
 }
 
-.splash-content h1 {
+.navigation a,
+.account-links a,
+.account-links button {
+    background: transparent;
+    border-color: rgba(36, 77, 115, 0.16);
+    color: var(--skin-navy);
+}
+
+/* Hero area */
+.hero-copy h1,
+.intro-strip h2,
+.section-heading h2,
+.product-panel h2,
+.about-section h2,
+.form-panel h2,
+.waitlist-panel h2,
+.faq-section h2 {
     color: var(--skin-navy);
 }
 
 .eyebrow,
-.intro-number,
-.card-number {
+.card-number,
+.intro-number {
     color: var(--skin-navy);
 }
 
-/* Navigation and account controls */
-.navigation a,
-.account-links a,
-.account-links button,
-.footer-links a {
-    border-color: rgba(36, 77, 115, .3);
-    color: var(--skin-navy);
+.hero-art {
+    background:
+        radial-gradient(circle at 72% 18%, rgba(255,255,255,.7), transparent 27%),
+        linear-gradient(140deg, #DCEAF7, #AFCBE7);
+    border-color: rgba(36, 77, 115, 0.1);
 }
 
-.navigation a:hover,
-.account-links a:hover,
-.account-links button:hover {
-    background: var(--skin-white);
-}
-
-/* Main buttons */
-.primary-button {
-    background: var(--skin-navy);
-    color: var(--skin-white);
-}
-
+/* Lavender call-to-action buttons */
+.primary-button,
 .secondary-button {
-    background: var(--skin-blue);
-    color: var(--skin-charcoal);
+    background: var(--skin-lavender);
+    color: var(--skin-navy);
 }
 
 .dark-button {
@@ -1109,21 +1116,22 @@ body {
 }
 
 .light-button {
-    background: var(--skin-cream);
+    background: var(--skin-lavender);
     color: var(--skin-navy);
 }
 
-/* Hero device area */
-.hero-art {
-    background:
-        radial-gradient(circle at 72% 18%, rgba(255,255,255,.36), transparent 24%),
-        linear-gradient(140deg, var(--skin-blue), var(--skin-navy));
-}
-
-/* Intro strip and feature cards */
-.intro-strip {
-    background: rgba(255,255,255,.52);
-    border-color: rgba(36,77,115,.15);
+/* White cards with soft-blue details */
+.intro-strip,
+.feature-card,
+.process-card,
+.spec-card,
+.method-note,
+.notice-card,
+.ingredient-grid article,
+.faq-section details,
+.auth-card {
+    background: var(--skin-white);
+    border: 1px solid rgba(36, 77, 115, 0.1);
 }
 
 .feature-icon,
@@ -1132,61 +1140,46 @@ body {
 }
 
 .blue-card {
-    background: #DCEAF5;
+    background: #E4EFF9;
 }
 
 .cream-card {
-    background: #FFF9F1;
+    background: #F8FAFD;
 }
 
 .sage-card {
-    background: #EAD8C7;
+    background: #E9E8F8;
 }
 
-/* Product details */
-.product-panel {
-    background: linear-gradient(135deg, #FFF9F1, var(--skin-cream));
-}
-
-.spec-card {
-    background: rgba(255,255,255,.82);
+/* Keep a visible gap above the product information panel */
+#product .product-panel {
+    background: linear-gradient(135deg, var(--skin-white), #E8F1FA);
+    border: 1px solid rgba(36, 77, 115, 0.1);
+    margin-top: 36px !important;
 }
 
 .spec-list div,
 .box-note {
-    border-color: rgba(36,77,115,.18);
+    border-color: rgba(36, 77, 115, 0.14);
 }
 
-.spec-list span {
-    color: var(--skin-brown);
+.spec-list span,
+.small-note {
+    color: var(--skin-muted);
 }
 
-/* How-to cards and notes */
-.process-card,
-.method-note,
-.notice-card,
-.ingredient-grid article {
-    background: rgba(255,255,255,.58);
-    border-color: rgba(36,77,115,.16);
-}
-
-.process-card > span {
-    color: var(--skin-brown);
-}
-
-/* Quote banner */
+/* Quote and table sections */
 .quote-section {
     background: linear-gradient(135deg, var(--skin-navy), #183955);
     color: var(--skin-white);
 }
 
-/* Insights table */
 .skin-table {
-    background: rgba(255,255,255,.58);
+    background: var(--skin-white);
 }
 
 .table-row:not(:last-child) {
-    border-color: rgba(36,77,115,.16);
+    border-color: rgba(36, 77, 115, 0.12);
 }
 
 .table-header {
@@ -1194,32 +1187,33 @@ body {
     color: var(--skin-white);
 }
 
-/* About illustration */
+/* About section */
 .about-art {
-    background: linear-gradient(135deg, #FFF9F1, #EAD8C7);
+    background: linear-gradient(135deg, #F8FAFD, #DCEAF7);
 }
 
 .about-circle {
     background: var(--skin-blue);
-    color: var(--skin-charcoal);
+    color: var(--skin-navy);
 }
 
 .stem {
-    background: var(--skin-brown);
+    background: var(--skin-navy);
 }
 
 .leaf {
-    background: var(--skin-blue);
+    background: var(--skin-lavender);
 }
 
-.values span {
-    border-color: var(--skin-navy);
+.values span,
+.auth-card a {
+    border-color: var(--skin-blue);
     color: var(--skin-navy);
 }
 
 /* Forms and waitlist */
 .form-panel {
-    background: linear-gradient(135deg, #FFF9F1, var(--skin-cream));
+    background: linear-gradient(135deg, var(--skin-white), #E8F1FA);
 }
 
 .form-panel input,
@@ -1228,47 +1222,37 @@ body {
 .waitlist-panel select,
 .auth-card input {
     background: var(--skin-white);
-    border-color: rgba(36,77,115,.28);
-    color: var(--skin-charcoal);
+    border-color: rgba(36, 77, 115, 0.2);
+    color: var(--skin-ink);
 }
 
 .waitlist-panel {
-    background: linear-gradient(135deg, var(--skin-blue), var(--skin-navy));
-    color: var(--skin-white);
+    background: linear-gradient(135deg, #DCEAF7, #C9D9F1);
+    color: var(--skin-navy);
 }
 
 .waitlist-panel h2,
 .waitlist-panel .eyebrow {
-    color: var(--skin-white);
+    color: var(--skin-navy);
 }
 
-/* Footer */
+/* Dark navy footer */
 .site-footer {
-    background: var(--skin-charcoal);
+    background: var(--skin-navy);
     color: var(--skin-white);
 }
 
 .footer-small,
 .copyright {
-    color: var(--skin-cream);
+    color: #E4EFF9;
 }
 
-/* Login, signup, and profile cards */
-.auth-card {
-    background: rgba(255,255,255,.82);
-    border-color: rgba(36,77,115,.16);
-}
+@media screen and (max-width: 620px) {
+    .site-header {
+        margin: 10px 12px 0;
+    }
 
-.auth-card a {
-    color: var(--skin-navy);
-}
-
-.google-button {
-    border-color: rgba(36,77,115,.28) !important;
-    color: var(--skin-navy);
-}
-
-.profile-avatar {
-    background: rgba(94,163,217,.24);
-    color: var(--skin-navy);
+    #product .product-panel {
+        margin-top: 24px !important;
+    }
 }
