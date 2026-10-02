@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Profile | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="loadAccount()">
-
 <header class="site-header">
     <a class="brand-logo" href="index.html" role="img" aria-label="SkinSense home"></a>
-    <a class="dark-button" href="index.html">Back to SkinSense</a>
+    <a class="logout-button" href="index.html">Back to SkinSense</a>
 </header>
-
 <main class="auth-page">
     <section class="auth-card">
         <div class="profile-avatar" aria-hidden="true">
@@ -21,16 +22,13 @@
                 <path d="M4 21c0-4.5 3.2-7 8-7s8 2.5 8 7"></path>
             </svg>
         </div>
-
-        <p class="eyebrow">Your profile</p>
-        <h1 id="account-username">Loading profile…</h1>
-
+        <p class="script">Your profile</p>
+        <h1 id="account-username">Loading profile&hellip;</h1>
         <button class="dark-button" type="button" onclick="logoutUser()">
             Log Out
         </button>
     </section>
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js"></script>
 </body>

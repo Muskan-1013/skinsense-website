@@ -1,90 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-    <a class="brand" href="index.html">
-        <img src="logo.png" alt="SkinSense logo">
+    <a class="brand" href="index.html" aria-label="SkinSense home">
+        <img src="logo.png" alt="SkinSense">
     </a>
-
-    <nav>
+    <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="product.html">Product</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="science.html">Science</a>
+        <a href="product.html">DermaSense</a>
+        <a href="how-it-works.html">How to Use</a>
         <a href="skin-insights.html">Insights</a>
+        <a href="science.html">Science</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="waitlist.html">Waitlist</a>
     </nav>
+    <div class="account-links">
+        <a class="nav-cta" href="waitlist.html">Waitlist</a>
+    </div>
 </header>
-
 <main>
-
-        <section class="page-hero">
-            <p class="eyebrow">Our story</p>
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="script">Our story</p>
             <h1>Science should feel accessible.</h1>
             <p>
                 SkinSense was created to make skin analysis more affordable,
                 understandable, and practical.
             </p>
-        </section>
-
-        <section class="story">
-            <p>
-                Many people choose skincare products based on assumptions,
-                trends, or confusing advice.
-            </p>
-
-            <p>
-                SkinSense aims to offer a simpler starting point by combining
-                sensors, measurement, and clear educational information.
-            </p>
-
-            <p>
-                Our mission is affordable, science-backed skin analysis for
-                everyone.
-            </p>
-        </section>
-
-        <section>
-            <h2>Our values</h2>
-
-            <div class="cards">
-                <div class="card">
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="story">
+                <p>
+                    Many people choose skincare products based on assumptions,
+                    trends, or confusing advice.
+                </p>
+                <p>
+                    SkinSense aims to offer a simpler starting point by combining
+                    sensors, measurement, and clear educational information.
+                </p>
+                <p>
+                    Our mission is affordable, science-backed skin analysis for
+                    everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="section-head">
+                <p class="script">What guides us</p>
+                <h2>Our values.</h2>
+            </div>
+            <div class="card-grid">
+                <article class="card">
                     <h3>Science-backed</h3>
                     <p>
                         We explain how readings are collected and calibrated.
                     </p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>Accessible</h3>
                     <p>
                         We focus on affordable components and simple experiences.
                     </p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>Transparent</h3>
                     <p>
                         We communicate limitations instead of overstating
                         accuracy.
                     </p>
-                </div>
+                </article>
             </div>
-        </section>
-
-        <section class="cream-section">
-            <h2>Our roadmap</h2>
-
+        </div>
+    </section>
+    <section class="cream-section">
+        <div class="wrap">
+            <p class="script">Where we're heading</p>
+            <h2>Our roadmap.</h2>
             <ul class="clean-list">
                 <li>Prototype development</li>
                 <li>Calibration testing</li>
@@ -92,33 +96,43 @@
                 <li>Improved sensor reliability</li>
                 <li>More accessible skin education</li>
             </ul>
-        </section>
-        
+        </div>
+    </section>
 </main>
-
-<footer>
-    <img src="logo.png" alt="SkinSense logo">
-
-    <p>
-        We don't guess your skin. We measure it.
-    </p>
-
-    <p class="small">
-        DermaSense provides educational guidance and does not replace
-        professional dermatological advice.
-    </p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <h4>SkinSense</h4>
+            <p>Know your skin. Care better.</p>
+            <p class="footer-fine">
+                DermaSense provides educational prototype readings and does not
+                replace professional dermatological advice.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="product.html">DermaSense</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="skin-insights.html">Insights</a></li>
+                <li><a href="science.html">Science</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="waitlist.html">Waitlist</a></li>
+                <li><a href="login.html">Log in</a></li>
+            </ul>
+        </div>
+        <div class="footer-brand-card">
+            <img class="footer-wordmark" src="logo.png" alt="SkinSense">
+            <p>Measurement-first skincare education from the SkinSense team.</p>
+            <p class="footer-fine">&copy; 2026 SkinSense</p>
+        </div>
+    </div>
 </footer>
-
-<script>
-function showMessage() {
-    var message = document.getElementById("confirmation");
-
-    if (message) {
-        message.innerHTML =
-            "Thank you. You have been added to the SkinSense waitlist.";
-    }
-}
-</script>
-
 </body>
 </html>

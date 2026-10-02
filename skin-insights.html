@@ -1,44 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Insights | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-    <a class="brand" href="index.html">
-        <img src="logo.png" alt="SkinSense logo">
+    <a class="brand" href="index.html" aria-label="SkinSense home">
+        <img src="logo.png" alt="SkinSense">
     </a>
-
-    <nav>
+    <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="product.html">Product</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="science.html">Science</a>
+        <a href="product.html">DermaSense</a>
+        <a href="how-it-works.html">How to Use</a>
         <a href="skin-insights.html">Insights</a>
+        <a href="science.html">Science</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="waitlist.html">Waitlist</a>
     </nav>
+    <div class="account-links">
+        <a class="nav-cta" href="waitlist.html">Waitlist</a>
+    </div>
 </header>
-
 <main>
-
-        <section class="page-hero">
-            <p class="eyebrow">Read your skin more clearly</p>
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="script">Read your skin more clearly</p>
             <h1>Skin Insights.</h1>
             <p>
                 Turn basic readings into a clearer picture of your skin patterns.
             </p>
-        </section>
-
-        <section>
-            <h2>Skin type classification</h2>
-
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="section-head">
+                <p class="script">Patterns, not verdicts</p>
+                <h2>Skin type classification.</h2>
+            </div>
             <table>
                 <tr>
                     <th>Skin type</th>
@@ -61,67 +65,89 @@
                     <td>Relatively balanced readings</td>
                 </tr>
             </table>
-        </section>
-
-        <section class="cream-section">
-            <h2>Ingredient suggestions</h2>
-
-            <div class="cards">
-                <div class="card">
+        </div>
+    </section>
+    <section class="cream-section">
+        <div class="wrap">
+            <p class="script">What to explore</p>
+            <h2>Ingredient suggestions.</h2>
+            <div class="card-grid four-cards">
+                <article class="card">
                     <h3>For dry skin</h3>
                     <p>Explore humectants, ceramides, and gentle moisturizers.</p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>For oily skin</h3>
                     <p>Explore lightweight hydration and non-comedogenic formulas.</p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>For combination skin</h3>
                     <p>Consider using different products for different areas.</p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>For normal skin</h3>
                     <p>Focus on maintaining balance with a simple routine.</p>
-                </div>
+                </article>
             </div>
-        </section>
-
-        <section>
-            <h2>Remember</h2>
-            <p>
-                Repeated measurements are more useful than one isolated result.
-                Skin changes with weather, products, stress, and daily habits.
-            </p>
-        </section>
-        
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="science-layout">
+                <div class="science-copy">
+                    <h3>Remember</h3>
+                    <p>
+                        Repeated measurements are more useful than one isolated
+                        result. Skin changes with weather, products, stress, and
+                        daily habits.
+                    </p>
+                </div>
+                <aside class="science-note">
+                    <p class="label">Prototype note</p>
+                    <h3>Context beats a single number.</h3>
+                    <p>
+                        A reading describes a moment, not your skin type. Track
+                        changes over time before drawing conclusions.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
 </main>
-
-<footer>
-    <img src="logo.png" alt="SkinSense logo">
-
-    <p>
-        We don't guess your skin. We measure it.
-    </p>
-
-    <p class="small">
-        DermaSense provides educational guidance and does not replace
-        professional dermatological advice.
-    </p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <h4>SkinSense</h4>
+            <p>Know your skin. Care better.</p>
+            <p class="footer-fine">
+                DermaSense provides educational prototype readings and does not
+                replace professional dermatological advice.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="product.html">DermaSense</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="skin-insights.html">Insights</a></li>
+                <li><a href="science.html">Science</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="waitlist.html">Waitlist</a></li>
+                <li><a href="login.html">Log in</a></li>
+            </ul>
+        </div>
+        <div class="footer-brand-card">
+            <img class="footer-wordmark" src="logo.png" alt="SkinSense">
+            <p>Measurement-first skincare education from the SkinSense team.</p>
+            <p class="footer-fine">&copy; 2026 SkinSense</p>
+        </div>
+    </div>
 </footer>
-
-<script>
-function showMessage() {
-    var message = document.getElementById("confirmation");
-
-    if (message) {
-        message.innerHTML =
-            "Thank you. You have been added to the SkinSense waitlist.";
-    }
-}
-</script>
-
 </body>
 </html>

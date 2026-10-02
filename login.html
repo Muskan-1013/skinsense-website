@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="redirectIfLoggedIn()">
-
 <main class="auth-page">
     <section class="auth-card">
-        <h1>Welcome back.</h1>
-        <p>Log in to your SkinSense account.</p>
-
+        <p class="script">Welcome back</p>
+        <h1>Log in to SkinSense.</h1>
+        <p>Pick up where you left off.</p>
         <label for="login-email">Email</label>
         <input id="login-email" type="email" required>
-
         <label for="login-password">Password</label>
         <input id="login-password" type="password" required>
-
         <button class="dark-button" onclick="loginUser()">Log In</button>
         <button class="google-button" onclick="loginWithGoogle()">
             Continue with Google
         </button>
-
         <p id="login-message"></p>
-
         <a href="forgot-password.html">Forgot your password?</a>
         <a href="signup.html">Create an account</a>
         <a href="index.html">Back to SkinSense</a>
     </section>
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js"></script>
 </body>

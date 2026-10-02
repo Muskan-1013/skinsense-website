@@ -1,109 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact and Support | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-    <a class="brand" href="index.html">
-        <img src="logo.png" alt="SkinSense logo">
+    <a class="brand" href="index.html" aria-label="SkinSense home">
+        <img src="logo.png" alt="SkinSense">
     </a>
-
-    <nav>
+    <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="product.html">Product</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="science.html">Science</a>
+        <a href="product.html">DermaSense</a>
+        <a href="how-it-works.html">How to Use</a>
         <a href="skin-insights.html">Insights</a>
+        <a href="science.html">Science</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="waitlist.html">Waitlist</a>
     </nav>
+    <div class="account-links">
+        <a class="nav-cta" href="waitlist.html">Waitlist</a>
+    </div>
 </header>
-
 <main>
-
-        <section class="page-hero">
-            <p class="eyebrow">We would love to hear from you</p>
-            <h1>Contact & Support.</h1>
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="script">We would love to hear from you</p>
+            <h1>Contact &amp; Support.</h1>
             <p>
                 Have a question about DermaSense? Send us a message.
             </p>
-        </section>
-
-        <section class="form-section">
-            <form onsubmit="return false;">
-                <label for="contact-name">Name</label>
-                <input id="contact-name" type="text" placeholder="Your name">
-
-                <label for="contact-email">Email</label>
-                <input id="contact-email" type="email" placeholder="you@example.com">
-
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" placeholder="How can we help?"></textarea>
-
-                <button class="button" type="submit">
-                    Send Message
-                </button>
-            </form>
-        </section>
-
-        <section class="cream-section">
-            <h2>Frequently asked questions</h2>
-
+        </div>
+    </section>
+    <section class="form-section">
+        <form onsubmit="return false;">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" type="text" placeholder="Your name">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" type="email" placeholder="you@example.com">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" placeholder="How can we help?"></textarea>
+            <button class="btn" type="submit">Send Message</button>
+        </form>
+    </section>
+    <section class="cream-section">
+        <div class="wrap">
+            <p class="script">Good to know</p>
+            <h2>Frequently asked questions.</h2>
             <h3>Does DermaSense replace a dermatologist?</h3>
             <p>
                 No. It is designed for educational guidance and personal
                 awareness.
             </p>
-
             <h3>Can I use one reading as a diagnosis?</h3>
             <p>
                 No. Repeated readings and professional advice are more reliable.
             </p>
-
             <h3>How do I calibrate the device?</h3>
             <p>
                 Follow the calibration instructions for moisture, pH, and
                 oiliness references.
             </p>
-
             <h3>How can I get product updates?</h3>
             <p>
                 Join the waitlist to receive future DermaSense announcements.
             </p>
-        </section>
-        
+        </div>
+    </section>
 </main>
-
-<footer>
-    <img src="logo.png" alt="SkinSense logo">
-
-    <p>
-        We don't guess your skin. We measure it.
-    </p>
-
-    <p class="small">
-        DermaSense provides educational guidance and does not replace
-        professional dermatological advice.
-    </p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <h4>SkinSense</h4>
+            <p>Know your skin. Care better.</p>
+            <p class="footer-fine">
+                DermaSense provides educational prototype readings and does not
+                replace professional dermatological advice.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="product.html">DermaSense</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="skin-insights.html">Insights</a></li>
+                <li><a href="science.html">Science</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="waitlist.html">Waitlist</a></li>
+                <li><a href="login.html">Log in</a></li>
+            </ul>
+        </div>
+        <div class="footer-brand-card">
+            <img class="footer-wordmark" src="logo.png" alt="SkinSense">
+            <p>Measurement-first skincare education from the SkinSense team.</p>
+            <p class="footer-fine">&copy; 2026 SkinSense</p>
+        </div>
+    </div>
 </footer>
-
-<script>
-function showMessage() {
-    var message = document.getElementById("confirmation");
-
-    if (message) {
-        message.innerHTML =
-            "Thank you. You have been added to the SkinSense waitlist.";
-    }
-}
-</script>
-
 </body>
 </html>

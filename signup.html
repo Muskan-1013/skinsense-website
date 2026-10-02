@@ -4,35 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="redirectIfLoggedIn()">
-
 <main class="auth-page">
     <section class="auth-card">
+        <p class="script">Join us</p>
         <h1>Create your account.</h1>
         <p>Join the SkinSense community.</p>
-
         <label for="signup-email">Email</label>
         <input id="signup-email" type="email" required>
-
         <label for="signup-password">Password</label>
         <input id="signup-password" type="password" required>
-
         <button class="dark-button" onclick="signUpUser()">
             Create Account
         </button>
         <button class="google-button" onclick="loginWithGoogle()">
             Sign up with Google
         </button>
-
         <p id="signup-message"></p>
-
         <a href="login.html">Already have an account? Log in</a>
         <a href="index.html">Back to SkinSense</a>
     </section>
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="auth.js"></script>
 </body>

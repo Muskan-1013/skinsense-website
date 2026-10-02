@@ -1,83 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DermaSense Product | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-    <a class="brand" href="index.html">
-        <img src="logo.png" alt="SkinSense logo">
+    <a class="brand" href="index.html" aria-label="SkinSense home">
+        <img src="logo.png" alt="SkinSense">
     </a>
-
-    <nav>
+    <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="product.html">Product</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="science.html">Science</a>
+        <a href="product.html">DermaSense</a>
+        <a href="how-it-works.html">How to Use</a>
         <a href="skin-insights.html">Insights</a>
+        <a href="science.html">Science</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="waitlist.html">Waitlist</a>
     </nav>
+    <div class="account-links">
+        <a class="nav-cta" href="waitlist.html">Waitlist</a>
+    </div>
 </header>
-
 <main>
-
-        <section class="page-hero">
-            <p class="eyebrow">The SkinSense device</p>
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="script">The SkinSense device</p>
             <h1>Meet DermaSense.</h1>
-            <p class="large-text">
-                Small device. Clearer skin insights.
-            </p>
+            <p class="large-text">Small device. Clearer skin insights.</p>
             <p>
                 DermaSense combines simple sensors with practical skincare
                 education to help you understand your skin.
             </p>
-        </section>
-
-        <section>
-            <p class="eyebrow">What it measures</p>
-            <h2>Four useful insights.</h2>
-
-            <div class="cards four-cards">
-                <div class="card">
-                    <h3>Moisture</h3>
-                    <p>
-                        Learn whether your skin may need more hydration.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>pH</h3>
-                    <p>
-                        Understand whether your skin is within a balanced range.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Oiliness</h3>
-                    <p>
-                        Observe surface oil levels and possible skin patterns.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Ingredient Guidance</h3>
-                    <p>
-                        Connect your readings with educational suggestions.
-                    </p>
+        </div>
+    </section>
+    <section>
+        <div class="wrap split">
+            <div class="split-media">
+                <div class="device-card">
+                    <img src="images/dermasense-device.jpg" alt="The DermaSense device">
                 </div>
             </div>
-        </section>
-
-        <section class="cream-section">
+            <div class="split-copy">
+                <p class="script">What it measures</p>
+                <h2>Four useful insights.</h2>
+                <p>
+                    Each reading is an estimate designed for learning about the
+                    prototype — not a clinical conclusion.
+                </p>
+                <ul class="checklist">
+                    <li>Moisture — is your skin asking for hydration?</li>
+                    <li>pH — is your barrier sitting in a balanced range?</li>
+                    <li>Oiliness — how much surface oil is present?</li>
+                    <li>Ingredient guidance — educational suggestions to explore.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="card-grid four-cards">
+                <article class="card">
+                    <h3>Moisture</h3>
+                    <p>Learn whether your skin may need more hydration.</p>
+                </article>
+                <article class="card">
+                    <h3>pH</h3>
+                    <p>Understand whether your skin is within a balanced range.</p>
+                </article>
+                <article class="card">
+                    <h3>Oiliness</h3>
+                    <p>Observe surface oil levels and possible skin patterns.</p>
+                </article>
+                <article class="card">
+                    <h3>Ingredient guidance</h3>
+                    <p>Connect your readings with educational suggestions.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="cream-section">
+        <div class="wrap">
+            <p class="script">In the box</p>
             <h2>What's in the box?</h2>
-
             <ul class="clean-list">
                 <li>DermaSense measurement device</li>
                 <li>Moisture sensing component</li>
@@ -86,11 +96,14 @@
                 <li>LCD display</li>
                 <li>Basic calibration guide</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Technical specifications</h2>
-
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="section-head">
+                <p class="script">Under the hood</p>
+                <h2>Technical specifications.</h2>
+            </div>
             <table>
                 <tr>
                     <th>Component</th>
@@ -121,40 +134,47 @@
                     <td>Approximately Rs. 2,500</td>
                 </tr>
             </table>
-        </section>
-
-        <section class="center-section">
-            <h2>Be part of the first release.</h2>
-            <a class="button" href="waitlist.html">
-                Join the Waitlist
-            </a>
-        </section>
-        
+        </div>
+    </section>
+    <section class="center-section">
+        <h2>Be part of the first release.</h2>
+        <a class="btn" href="waitlist.html">Join the Waitlist</a>
+    </section>
 </main>
-
-<footer>
-    <img src="logo.png" alt="SkinSense logo">
-
-    <p>
-        We don't guess your skin. We measure it.
-    </p>
-
-    <p class="small">
-        DermaSense provides educational guidance and does not replace
-        professional dermatological advice.
-    </p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <h4>SkinSense</h4>
+            <p>Know your skin. Care better.</p>
+            <p class="footer-fine">
+                DermaSense provides educational prototype readings and does not
+                replace professional dermatological advice.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="product.html">DermaSense</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="skin-insights.html">Insights</a></li>
+                <li><a href="science.html">Science</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="waitlist.html">Waitlist</a></li>
+                <li><a href="login.html">Log in</a></li>
+            </ul>
+        </div>
+        <div class="footer-brand-card">
+            <img class="footer-wordmark" src="logo.png" alt="SkinSense">
+            <p>Measurement-first skincare education from the SkinSense team.</p>
+            <p class="footer-fine">&copy; 2026 SkinSense</p>
+        </div>
+    </div>
 </footer>
-
-<script>
-function showMessage() {
-    var message = document.getElementById("confirmation");
-
-    if (message) {
-        message.innerHTML =
-            "Thank you. You have been added to the SkinSense waitlist.";
-    }
-}
-</script>
-
 </body>
 </html>

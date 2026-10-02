@@ -1,146 +1,159 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works | SkinSense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-    <a class="brand" href="index.html">
-        <img src="logo.png" alt="SkinSense logo">
+    <a class="brand" href="index.html" aria-label="SkinSense home">
+        <img src="logo.png" alt="SkinSense">
     </a>
-
-    <nav>
+    <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="product.html">Product</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="science.html">Science</a>
+        <a href="product.html">DermaSense</a>
+        <a href="how-it-works.html">How to Use</a>
         <a href="skin-insights.html">Insights</a>
+        <a href="science.html">Science</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="waitlist.html">Waitlist</a>
     </nav>
+    <div class="account-links">
+        <a class="nav-cta" href="waitlist.html">Waitlist</a>
+    </div>
 </header>
-
 <main>
-
-        <section class="page-hero">
-            <p class="eyebrow">Simple, practical, transparent</p>
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="script">Simple, practical, transparent</p>
             <h1>How It Works.</h1>
             <p>
                 Four simple steps turn a reading into a better understanding
                 of your skin.
             </p>
-        </section>
-
-        <section class="large-steps">
-            <div class="large-step">
-                <span>01</span>
-                <h2>Calibrate</h2>
-                <p>
-                    Prepare the sensors using known dry, wet, pH, clean-paper,
-                    and oil-paper references.
-                </p>
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="large-steps">
+                <article class="large-step">
+                    <span>Step 01</span>
+                    <h2>Calibrate</h2>
+                    <p>
+                        Prepare the sensors using known dry, wet, pH,
+                        clean-paper, and oil-paper references.
+                    </p>
+                </article>
+                <article class="large-step">
+                    <span>Step 02</span>
+                    <h2>Measure</h2>
+                    <p>
+                        Place the device on your skin and collect moisture, pH,
+                        and oiliness readings.
+                    </p>
+                </article>
+                <article class="large-step">
+                    <span>Step 03</span>
+                    <h2>See results</h2>
+                    <p>
+                        Review your results in simple language instead of
+                        confusing technical numbers.
+                    </p>
+                </article>
+                <article class="large-step">
+                    <span>Step 04</span>
+                    <h2>Get recommendations</h2>
+                    <p>
+                        Use the educational guidance to explore ingredients that
+                        may suit your skin profile.
+                    </p>
+                </article>
             </div>
-
-            <div class="large-step">
-                <span>02</span>
-                <h2>Measure</h2>
-                <p>
-                    Place the device on your skin and collect moisture, pH,
-                    and oiliness readings.
-                </p>
-            </div>
-
-            <div class="large-step">
-                <span>03</span>
-                <h2>See Results</h2>
-                <p>
-                    Review your results in simple language instead of confusing
-                    technical numbers.
-                </p>
-            </div>
-
-            <div class="large-step">
-                <span>04</span>
-                <h2>Get Recommendations</h2>
-                <p>
-                    Use the educational guidance to explore ingredients that may
-                    suit your skin profile.
-                </p>
-            </div>
-        </section>
-
-        <section class="cream-section">
+        </div>
+    </section>
+    <section class="cream-section">
+        <div class="wrap">
+            <p class="script">The oil estimate</p>
             <h2>Why blotting paper?</h2>
             <p>
                 Oiliness can be estimated by comparing clean blotting paper with
                 paper that has collected oil from the skin.
             </p>
-
             <p>
                 The BH1750 light sensor observes changes in reflected light
                 between the clean and oil-exposed samples.
             </p>
-        </section>
-
-        <section>
-            <h2>What do the readings mean?</h2>
-
-            <div class="cards">
-                <div class="card">
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <div class="section-head">
+                <p class="script">Making sense of it</p>
+                <h2>What do the readings mean?</h2>
+            </div>
+            <div class="card-grid">
+                <article class="card">
                     <h3>Lower moisture</h3>
                     <p>
                         Your skin may benefit from a gentle, hydrating routine.
                     </p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>Higher oiliness</h3>
                     <p>
                         Lightweight, non-comedogenic products may be useful to
                         explore.
                     </p>
-                </div>
-
-                <div class="card">
+                </article>
+                <article class="card">
                     <h3>Unbalanced pH</h3>
                     <p>
                         A gentle cleanser and barrier-focused routine may help.
                     </p>
-                </div>
+                </article>
             </div>
-        </section>
-        
+        </div>
+    </section>
 </main>
-
-<footer>
-    <img src="logo.png" alt="SkinSense logo">
-
-    <p>
-        We don't guess your skin. We measure it.
-    </p>
-
-    <p class="small">
-        DermaSense provides educational guidance and does not replace
-        professional dermatological advice.
-    </p>
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-col">
+            <h4>SkinSense</h4>
+            <p>Know your skin. Care better.</p>
+            <p class="footer-fine">
+                DermaSense provides educational prototype readings and does not
+                replace professional dermatological advice.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="product.html">DermaSense</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="skin-insights.html">Insights</a></li>
+                <li><a href="science.html">Science</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="waitlist.html">Waitlist</a></li>
+                <li><a href="login.html">Log in</a></li>
+            </ul>
+        </div>
+        <div class="footer-brand-card">
+            <img class="footer-wordmark" src="logo.png" alt="SkinSense">
+            <p>Measurement-first skincare education from the SkinSense team.</p>
+            <p class="footer-fine">&copy; 2026 SkinSense</p>
+        </div>
+    </div>
 </footer>
-
-<script>
-function showMessage() {
-    var message = document.getElementById("confirmation");
-
-    if (message) {
-        message.innerHTML =
-            "Thank you. You have been added to the SkinSense waitlist.";
-    }
-}
-</script>
-
 </body>
 </html>
