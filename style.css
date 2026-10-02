@@ -1076,3 +1076,45 @@ body.auth-checking .site-footer {
         text-align: left;
     }
 }
+/* Smaller SkinSense images */
+.brand-logo {
+    height: 38px;
+    max-width: 115px;
+    width: 115px;
+}
+
+.footer-logo {
+    max-height: 48px;
+    max-width: 120px;
+    width: 120px;
+}
+
+.hero-device {
+    height: 300px;
+    max-width: 70%;
+}
+
+.product-device {
+    height: 220px;
+    max-width: 75%;
+}
+
+@media screen and (max-width: 650px) {
+    .hero-visual {
+        min-height: 270px;
+    }
+
+    .hero-device {
+        height: 230px;
+        max-width: 72%;
+    }
+
+    .product-panel-visual {
+        min-height: 210px;
+    }
+
+    .product-device {
+        height: 180px;
+        max-width: 78%;
+    }
+}
