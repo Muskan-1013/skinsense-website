@@ -385,7 +385,7 @@ main {
 
 /* Sections and cards */
 .section {
-    margin: 0 auto 110px;
+    margin: 32px auto 110px;
     max-width: 1120px;
 }
 
@@ -1029,5 +1029,19 @@ main {
     .copyright {
         margin-top: 22px;
         text-align: left;
+    }
+}
+/* Space between the feature cards and the product panel */
+#product .feature-grid {
+    margin-bottom: 36px !important;
+}
+
+#product .product-panel {
+    margin-top: 0 !important;
+}
+
+@media screen and (max-width: 620px) {
+    #product .feature-grid {
+        margin-bottom: 24px !important;
     }
 }
