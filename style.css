@@ -1045,3 +1045,230 @@ main {
         margin-bottom: 24px !important;
     }
 }
+:root {
+    --skin-blue: #5EA3D9;
+    --skin-navy: #244D73;
+    --skin-cream: #F3E6D6;
+    --skin-brown: #8C6245;
+    --skin-charcoal: #282B2B;
+    --skin-white: #FFFFFF;
+}
+
+/* Main page */
+body {
+    background: var(--skin-cream);
+    color: var(--skin-charcoal);
+}
+
+/* Splash screen */
+.splash-screen {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.75), transparent 28%),
+        linear-gradient(135deg, var(--skin-cream), #ead7c1);
+}
+
+.splash-content h1 {
+    color: var(--skin-navy);
+}
+
+.eyebrow,
+.intro-number,
+.card-number {
+    color: var(--skin-navy);
+}
+
+/* Navigation and account controls */
+.navigation a,
+.account-links a,
+.account-links button,
+.footer-links a {
+    border-color: rgba(36, 77, 115, .3);
+    color: var(--skin-navy);
+}
+
+.navigation a:hover,
+.account-links a:hover,
+.account-links button:hover {
+    background: var(--skin-white);
+}
+
+/* Main buttons */
+.primary-button {
+    background: var(--skin-navy);
+    color: var(--skin-white);
+}
+
+.secondary-button {
+    background: var(--skin-blue);
+    color: var(--skin-charcoal);
+}
+
+.dark-button {
+    background: var(--skin-navy);
+    color: var(--skin-white);
+}
+
+.light-button {
+    background: var(--skin-cream);
+    color: var(--skin-navy);
+}
+
+/* Hero device area */
+.hero-art {
+    background:
+        radial-gradient(circle at 72% 18%, rgba(255,255,255,.36), transparent 24%),
+        linear-gradient(140deg, var(--skin-blue), var(--skin-navy));
+}
+
+/* Intro strip and feature cards */
+.intro-strip {
+    background: rgba(255,255,255,.52);
+    border-color: rgba(36,77,115,.15);
+}
+
+.feature-icon,
+.process-symbol {
+    color: var(--skin-blue);
+}
+
+.blue-card {
+    background: #DCEAF5;
+}
+
+.cream-card {
+    background: #FFF9F1;
+}
+
+.sage-card {
+    background: #EAD8C7;
+}
+
+/* Product details */
+.product-panel {
+    background: linear-gradient(135deg, #FFF9F1, var(--skin-cream));
+}
+
+.spec-card {
+    background: rgba(255,255,255,.82);
+}
+
+.spec-list div,
+.box-note {
+    border-color: rgba(36,77,115,.18);
+}
+
+.spec-list span {
+    color: var(--skin-brown);
+}
+
+/* How-to cards and notes */
+.process-card,
+.method-note,
+.notice-card,
+.ingredient-grid article {
+    background: rgba(255,255,255,.58);
+    border-color: rgba(36,77,115,.16);
+}
+
+.process-card > span {
+    color: var(--skin-brown);
+}
+
+/* Quote banner */
+.quote-section {
+    background: linear-gradient(135deg, var(--skin-navy), #183955);
+    color: var(--skin-white);
+}
+
+/* Insights table */
+.skin-table {
+    background: rgba(255,255,255,.58);
+}
+
+.table-row:not(:last-child) {
+    border-color: rgba(36,77,115,.16);
+}
+
+.table-header {
+    background: var(--skin-navy);
+    color: var(--skin-white);
+}
+
+/* About illustration */
+.about-art {
+    background: linear-gradient(135deg, #FFF9F1, #EAD8C7);
+}
+
+.about-circle {
+    background: var(--skin-blue);
+    color: var(--skin-charcoal);
+}
+
+.stem {
+    background: var(--skin-brown);
+}
+
+.leaf {
+    background: var(--skin-blue);
+}
+
+.values span {
+    border-color: var(--skin-navy);
+    color: var(--skin-navy);
+}
+
+/* Forms and waitlist */
+.form-panel {
+    background: linear-gradient(135deg, #FFF9F1, var(--skin-cream));
+}
+
+.form-panel input,
+.form-panel textarea,
+.waitlist-panel input,
+.waitlist-panel select,
+.auth-card input {
+    background: var(--skin-white);
+    border-color: rgba(36,77,115,.28);
+    color: var(--skin-charcoal);
+}
+
+.waitlist-panel {
+    background: linear-gradient(135deg, var(--skin-blue), var(--skin-navy));
+    color: var(--skin-white);
+}
+
+.waitlist-panel h2,
+.waitlist-panel .eyebrow {
+    color: var(--skin-white);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--skin-charcoal);
+    color: var(--skin-white);
+}
+
+.footer-small,
+.copyright {
+    color: var(--skin-cream);
+}
+
+/* Login, signup, and profile cards */
+.auth-card {
+    background: rgba(255,255,255,.82);
+    border-color: rgba(36,77,115,.16);
+}
+
+.auth-card a {
+    color: var(--skin-navy);
+}
+
+.google-button {
+    border-color: rgba(36,77,115,.28) !important;
+    color: var(--skin-navy);
+}
+
+.profile-avatar {
+    background: rgba(94,163,217,.24);
+    color: var(--skin-navy);
+}
